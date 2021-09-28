@@ -32,18 +32,8 @@
             </li>
           </ul>
         </nav>
+
         <div class="footer-container__actions">
-          <div class="telegram">
-            <picture>
-              <source
-                srcset="
-                  ~assets/img/telegram.png,
-                  ~assets/img/telegram@2x.png 2x
-                "
-              />
-              <img src="~assets/img/telegram.png" alt="online sim" />
-            </picture>
-          </div>
           <div class="footer-container__lang">
             <p>{{ $i18n.locale }}</p>
             <arrow class="arrow" />
@@ -105,7 +95,7 @@ export default {
       align-items: center;
       height: 100%;
       color: $white;
-      margin: 0 10% 0 0;
+      margin: 0;
 
       &-list {
         display: flex;
