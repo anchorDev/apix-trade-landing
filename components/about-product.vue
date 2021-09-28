@@ -14,6 +14,31 @@
         v-html="$t('index.aboutProduct.text')"
       />
     </div>
+
+    <div class="container wrapper">
+      <div class="img" />
+
+      <div class="information">
+        <h2>
+          Наш продукт объединяет трейдеров и инвесторов для защищенного
+          сотрудничества
+        </h2>
+
+        <p>
+          Мы видим нашу платформу, как то место, где инвестор смог бы с полной
+          уверенностью вложить свои деньги, доверив их профессиональным
+          трейдерам, <span>безопасно умножая свой капитал</span>, в то время как
+          трейдер получает возможность управления множеством аккаунтов
+          инвесторов единовременно, извлекая максимум прибыли от своей торговли.
+        </p>
+
+        <p>
+          <span>Уникальные возможности</span> нашей платформы позволят открыть
+          мир безопасных инвестиционных возможностей как для профессионалов, так
+          и для начинающих.
+        </p>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -62,6 +87,46 @@ export default {
       background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .img {
+      flex: 0 0 60%;
+    }
+
+    .information {
+      flex: 0 0 35%;
+      color: #99a7b8;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h2 {
+        font-size: 24px;
+        line-height: 1.25;
+        letter-spacing: 1.44px;
+        margin-bottom: 27px;
+      }
+
+      p {
+        color: #6e7594;
+        margin-bottom: 39px;
+        font-size: 15px;
+        font-weight: 100;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        span {
+          color: #99a7b8;
+        }
+      }
     }
   }
 }
