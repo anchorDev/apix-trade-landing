@@ -9,6 +9,7 @@
     <calculator />
     <about-product />
     <registration-offer />
+    <steps-of-work-with-system />
     <faq />
     <start-to-earn />
   </main>
