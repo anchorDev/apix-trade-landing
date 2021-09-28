@@ -1,13 +1,18 @@
 <template>
   <section id="faq" class="faq wrapper">
     <h2 v-in-viewport.once class="fade-in">{{ $t('index.faq.title') }}</h2>
-    <faq-item
-      v-for="(item, i) in $t('index.faq.list')"
-      :key="i"
-      v-in-viewport.once
-      :data="item"
-      class="fade-in"
-    />
+
+    <div v-for="(group, i) in $t('index.faq.list')" :key="i" class="faq--group">
+      <h4>{{ group.groupName }}</h4>
+
+      <faq-item
+        v-for="(item, idx) in group.items"
+        :key="idx"
+        v-in-viewport.once
+        :data="item"
+        class="fade-in"
+      />
+    </div>
   </section>
 </template>
 
@@ -28,6 +33,16 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &--group {
+    width: 100%;
+    margin-bottom: 64px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   h2 {
     margin: 0 auto 45px;
     text-align: center;
@@ -46,6 +61,14 @@ export default {
     background-size: 99% 99%;
     background-position: 50%;
     background-repeat: no-repeat;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #99a7b8;
+    margin-bottom: 16px;
   }
 
   @include bp(1200px) {
