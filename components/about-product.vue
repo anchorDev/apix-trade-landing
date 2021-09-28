@@ -16,7 +16,17 @@
     </div>
 
     <div class="container wrapper">
-      <div class="img" />
+      <div class="img">
+        <picture>
+          <source
+            srcset="
+              ~assets/img/api-defender.png,
+              ~assets/img/api-defender@2x.png 2x
+            "
+          />
+          <img src="~assets/img/api-defender.png" alt="apix.trade" />
+        </picture>
+      </div>
 
       <div class="information">
         <h2>
@@ -96,15 +106,19 @@ export default {
     flex-direction: row;
 
     .img {
-      flex: 0 0 60%;
+      flex: 0 0 67%;
+
+      img {
+        max-width: 100%;
+      }
     }
 
     .information {
       flex: 0 0 35%;
       color: #99a7b8;
       display: flex;
-      align-items: center;
       flex-direction: column;
+      justify-content: center;
 
       h2 {
         font-size: 24px;
