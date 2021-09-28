@@ -1,0 +1,45 @@
+//colors
+$white: #fff;
+$black: #000;
+$bg: #212429;
+$border-color: #333566;
+
+$text-gradient: linear-gradient(to top, #6dcaff, #c663ff), linear-gradient(to bottom, #bfbccd, #bfbccd);
+$text-gradient: radial-gradient(circle at 0 0, #6dcaff, #c663ff), linear-gradient(to bottom, #6e7594, #6e7594);
+$title-gradient: linear-gradient(to top, #4ffff9, #19d1ff, #df2eff), linear-gradient(to bottom, #dae1e9, #dae1e9);
+$card-gradient: radial-gradient(circle at 0 0, #d71fff, #242834), radial-gradient(circle at 0 0, #1fcaff, #242834), linear-gradient(to top, #2a3145, #242834);
+
+//shapes
+$border-radius-4: 4px;
+$border-radius-btn: 22px;
+$border-radius-card-sm: 17px;
+$border-radius-card-lg: 25px;
+
+//Text size
+//$h1: 48px;
+//$h1-lh: 58px;
+//$h1-ls: -0.6px;
+
+$h2: 63px;
+$h2-lh: 0.66;
+$h2-ls: 2.54px;
+
+$h3: 31px;
+$h3-lh: 0.76;
+$h3-ls: 1.89px;
+
+$h4: 28px;
+$h4-lh: 1.21;
+$h4-ls: 1.14px;
+$h4-fw: 600;
+
+$p-1: 18px;
+$p-1-lh: 1.6;
+$p-1-ls: 1.2px;
+$p-2-ls: 0.9px;
+$p-3-ls: 0.6px;
+$p-fw: 300;
+
+//breakpoints
+$lg: 1279px;
+$md: 767px;

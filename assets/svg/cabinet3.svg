@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="cabinet3" viewBox="0 0 55.26 33">
+    <linearGradient id="kranyot05a" x1="0" x2="55.256" y1="16.5" y2="16.5" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#3ABFF0"/>
+        <stop offset=".488" stop-color="#999EFB"/>
+        <stop offset="1" stop-color="#BA73FC"/>
+    </linearGradient>
+    <path fill="url(#kranyot05a)" d="M44.33 18.63L54.81 8.6l-1.4-1.46-9.89 9.47H32.09v-6.15h12.24L55.26 0H10.93L0 10.46h14.55v6.15H.51v2.02h14.04v5.38H.51v2.02h14.04v4.94H.51V33h43.83l10.48-10.04-1.4-1.46-9.89 9.47H32.09v-4.94h12.24l10.48-10.02-1.4-1.46L43.52 24H32.09v-5.38h12.24zm5.89-16.61l-6.7 6.41H33.07l6.71-6.41h10.44zm-13.36 0l-6.72 6.41h-.08v22.54h-13.5V9.87l8.21-7.84h12.09zm-25.12 0h10.12l-6.71 6.41H5.04l6.7-6.41z"/>
+</svg>

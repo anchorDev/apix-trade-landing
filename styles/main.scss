@@ -1,0 +1,78 @@
+*{
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+.wrapper {
+  max-width: 1269px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+//reveal animation
+.fade-in {
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: opacity .4s, transform .4s;
+
+  &.in-viewport {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.telegram {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #2a3145, #242834),
+  radial-gradient(circle at 0 0, #06c7ff, #f14cf4);
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  img {
+    position: relative;
+    top: 3px;
+    left: -1px;
+  }
+}
+
+//svg styles
+.hero1 {
+  width: 39px;
+  height: 45px;
+}
+.hero2 {
+  width: 53px;
+  height: 54px;
+}
+.hero3 {
+  width: 41px;
+  height: 45px;
+}
+.cabinet1 {
+  width: 49px;
+  height: 49px;
+}
+.cabinet2 {
+  width: 57px;
+  height: 33px;
+}
+.cabinet3 {
+  width: 57px;
+  height: 35px;
+}
+.cabinet4 {
+  width: 53px;
+  height: 40px;
+}
