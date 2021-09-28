@@ -61,9 +61,9 @@ export default {
   },
   data: () => {
     return {
-      capital: 5000,
-      average_income: 2,
-      commission: 1,
+      capital: 10000,
+      average_income: 10,
+      commission: 30,
     }
   },
   computed: {
@@ -73,13 +73,28 @@ export default {
     oneDay() {
       return (this.oneMonth / 30).toFixed(0)
     },
+    oneMonthProfit() {
+      return this.capitalPercent * this.average_income
+    },
     oneMonth() {
-      const profit = this.capitalPercent * this.average_income
-      const amountCommission = (profit / 100) * this.commission
+      const amountCommission = (this.oneMonthProfit / 100) * this.commission
       return amountCommission.toFixed(0)
     },
     oneYear() {
-      return (this.oneMonth * 12).toFixed(0)
+      let currentCapital = this.capital
+
+      return Array(12)
+        .fill(0)
+        .reduce((acc) => {
+          const capitalPercent = currentCapital / 100
+          const oneMonthProfit = capitalPercent * this.average_income
+          const amountCommission = (oneMonthProfit / 100) * this.commission
+
+          currentCapital += oneMonthProfit
+
+          const total = parseInt(acc, 10) + amountCommission
+          return total.toFixed(0)
+        }, 0)
     },
   },
 }
