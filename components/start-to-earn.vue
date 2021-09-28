@@ -1,6 +1,11 @@
 <template>
   <section class="start-to-earn wrapper">
     <h4 v-in-viewport.once class="fade-in">{{ $t('index.start.title') }}</h4>
+
+    <p v-in-viewport.once class="fade-in description">
+      {{ $t('index.start.description') }}
+    </p>
+
     <button v-in-viewport.once class="btn btn--gradient fade-in">
       <picture>
         <source
@@ -12,7 +17,7 @@
           alt="apix.trade"
         />
       </picture>
-      <p>{{ $t('index.hero.btn_1') }}</p>
+      <p>{{ $t('index.start.btn') }}</p>
     </button>
   </section>
 </template>
@@ -37,11 +42,21 @@ export default {
   justify-content: center;
   position: relative;
   z-index: 1;
+
   h4 {
     max-width: 656px;
     color: #dae1e9;
-    margin: 0 auto 40px;
+    margin: 0 auto 25px;
     text-shadow: 0 0 10px rgba(29, 182, 253, 0.52);
+  }
+
+  p.description {
+    max-width: 680px;
+    text-align: center;
+    color: #fefefe;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 27px;
   }
 }
 </style>
