@@ -8,6 +8,7 @@
     <cabinet />
     <calculator />
     <about-product />
+    <registration-offer />
     <faq />
     <start-to-earn />
   </main>

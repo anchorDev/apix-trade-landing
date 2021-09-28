@@ -125,6 +125,7 @@ export default {
 
         span {
           color: #99a7b8;
+          font-weight: normal;
         }
       }
     }
