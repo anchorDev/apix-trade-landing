@@ -62,24 +62,24 @@ export default {
   data: () => {
     return {
       capital: 5000,
-      average_income: 1,
-      commission: 5,
+      average_income: 2,
+      commission: 1,
     }
   },
   computed: {
-    percentage() {
-      return (this.capital / 100) * this.average_income
+    capitalPercent() {
+      return this.capital / 100
     },
     oneDay() {
-      let income = this.percentage
-      if (isNaN(this.percentage)) income = 0
-      return (income / 100) * 40
+      return (this.oneMonth / 30).toFixed(0)
     },
     oneMonth() {
-      return this.oneDay * 30
+      const profit = this.capitalPercent * this.average_income
+      const amountCommission = (profit / 100) * this.commission
+      return amountCommission.toFixed(0)
     },
     oneYear() {
-      return this.oneDay * 365
+      return (this.oneMonth * 12).toFixed(0)
     },
   },
 }
@@ -88,11 +88,13 @@ export default {
 <style lang="scss" scoped>
 .calculator {
   padding: 0 0 170px;
+
   &__wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     h2 {
       background-image: linear-gradient(
         90deg,
@@ -112,6 +114,7 @@ export default {
       margin: 0 0 30px;
     }
   }
+
   &__card {
     display: flex;
     width: 100%;
@@ -133,14 +136,18 @@ export default {
       flex-direction: column;
     }
   }
+
   &__col {
     flex: 1 0 322px;
+
     &:first-child {
       margin: 0 45px 0 0;
+
       p {
         padding: 0 0 0 5px;
         margin: 0 0 13px;
       }
+
       @include bp(900px) {
         margin: 0 0 40px;
         p {
@@ -148,9 +155,11 @@ export default {
         }
       }
     }
+
     p {
       color: #99a7b8;
     }
+
     &--long {
       flex: 1 0 calc(100% - 367px);
       display: flex;
@@ -163,6 +172,7 @@ export default {
         margin: 0 0 17px;
       }
     }
+
     @include bp($lg) {
       flex: 1 0 250px;
       &--long {
@@ -174,12 +184,14 @@ export default {
       flex: auto;
     }
   }
+
   &__input {
     &:nth-child(2),
     &:nth-child(4) {
       margin: 0 0 25px;
     }
   }
+
   .box {
     display: -ms-grid;
     display: grid;
@@ -191,6 +203,7 @@ export default {
       grid-template-columns: 1fr;
       gap: 16px 0;
     }
+
     &__col {
       padding: 53px 0 47px 41px;
       border-radius: $border-radius-card-lg;
@@ -205,6 +218,7 @@ export default {
       @include bp($lg) {
         padding: 30px 20px;
       }
+
       h3 {
         text-shadow: 0 0 9px rgba(29, 182, 253, 0.52);
         background: linear-gradient(
