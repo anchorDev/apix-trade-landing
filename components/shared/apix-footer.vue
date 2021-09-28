@@ -56,6 +56,7 @@
 
 <script>
 import Arrow from '@/assets/svg/arrow.svg?inline'
+
 export default {
   name: 'ApixFooter',
   components: {
@@ -63,7 +64,14 @@ export default {
   },
   data() {
     return {
-      idArr: ['#main', '#advantages', '#functionality', '#cabinet', '#faq'],
+      idArr: [
+        '#main',
+        '#functionality',
+        '#cabinet',
+        '#calculator',
+        '#about-product',
+        '#faq',
+      ],
     }
   },
   methods: {
@@ -97,12 +105,14 @@ export default {
       align-items: center;
       height: 100%;
       color: $white;
-      margin: 0 25% 0 0;
+      margin: 0 10% 0 0;
+
       &-list {
         display: flex;
         align-items: center;
         height: 100%;
       }
+
       &-link {
         cursor: pointer;
         padding: 6px;
@@ -146,6 +156,7 @@ export default {
       color: #dae1e9;
       cursor: pointer;
       margin: 0 0 0 25px;
+
       p {
         text-transform: uppercase;
         letter-spacing: 0.3px;
@@ -162,6 +173,7 @@ export default {
   @include bp(1200px) {
     &-container {
       padding: 80px 0 33px;
+
       &__nav {
         margin: 0;
       }

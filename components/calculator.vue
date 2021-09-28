@@ -1,5 +1,5 @@
 <template>
-  <section class="calculator">
+  <section id="calculator" class="calculator">
     <div class="wrapper calculator__wrap">
       <h2 v-in-viewport.once class="fade-in">{{ $t('index.calc.title') }}</h2>
       <div class="calculator__card">

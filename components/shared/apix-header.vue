@@ -106,7 +106,14 @@ export default {
   data() {
     return {
       isScrolled: false,
-      idArr: ['#main', '#functionality', '#cabinet', '#about-product', '#faq'],
+      idArr: [
+        '#main',
+        '#functionality',
+        '#cabinet',
+        '#calculator',
+        '#about-product',
+        '#faq',
+      ],
       isBurgerOpen: false,
     }
   },
