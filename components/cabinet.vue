@@ -27,12 +27,15 @@
         <div class="cabinet__col">
           <picture>
             <source
-              srcset="~assets/img/cabinet.png, ~assets/img/cabinet@2x.png 2x"
+              srcset="
+                ~assets/img/service-screen.png,
+                ~assets/img/service-screen.png 2x
+              "
             />
             <img
               v-in-viewport.once
               class="cabinet__img fade-in"
-              src="~assets/img/cabinet.png"
+              src="~assets/img/service-screen.png"
               alt="apix.trade"
             />
           </picture>
@@ -66,6 +69,7 @@ export default {
 <style lang="scss" scoped>
 .cabinet {
   padding: 0 0 91px;
+
   h2 {
     background-image: linear-gradient(
       90deg,
@@ -102,20 +106,40 @@ export default {
 
   &__wrap {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__col {
     &:first-child {
       flex: 1 0 550px;
     }
+
     &:last-child {
-      margin: -5.5% -26% 0 0;
+      margin: -5.5% 0 0 0;
+      width: 51%;
+
+      picture {
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 11px;
+        box-shadow: 0.3px 5px 56.6px 2.4px rgba(223, 46, 255, 0.3);
+        border: solid 2.2px #947dfe;
+        background-image: linear-gradient(to top, #4ffff9, #19d1ff, #df2eff);
+
+        img {
+          border-radius: 11px;
+          display: block;
+          max-width: 100%;
+        }
+      }
     }
   }
 
   &__list {
     max-width: 550px;
     margin: 0 0 64px;
+
     &-item {
       display: flex;
       flex-direction: column;
@@ -140,10 +164,7 @@ export default {
   }
 
   &__img {
-    position: relative;
-    left: -8%;
-    top: -5.4%;
-    max-width: 100%;
+    max-width: 90%;
   }
 
   @include bp(1200px) {
@@ -167,9 +188,11 @@ export default {
 
       &-item {
         padding: 0 0 0 80px;
+
         p {
           white-space: unset;
         }
+
         svg {
           right: calc(100% - 54px);
         }
