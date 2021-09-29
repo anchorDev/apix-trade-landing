@@ -29,7 +29,7 @@
             <source
               srcset="
                 ~assets/img/service-screen.png,
-                ~assets/img/service-screen.png 2x
+                ~assets/img/service-screen@2x.png 2x
               "
             />
             <img
