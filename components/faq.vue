@@ -80,7 +80,7 @@ export default {
 
   @include bp(1100px) {
     h2 {
-      width: 120px;
+      //width: 120px;
     }
   }
 }

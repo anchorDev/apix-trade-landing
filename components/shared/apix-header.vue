@@ -72,19 +72,13 @@
             </li>
           </ul>
           <div class="header__actions header__actions--mob">
-            <div class="header__actions-item telegram">
-              <picture>
-                <source
-                  srcset="
-                    ~assets/img/telegram.png,
-                    ~assets/img/telegram@2x.png 2x
-                  "
-                />
-                <img src="~assets/img/telegram.png" alt="online sim" />
-              </picture>
-            </div>
             <button class="header__btn btn btn--header">
               {{ $t('index.header.singInBtn') }}
+            </button>
+            <button class="header__btn btn btn--gradient">
+              <p>
+                {{ $t('index.header.singUpBtn') }}
+              </p>
             </button>
             <div class="header__lang">
               <p>{{ $i18n.locale }}</p>
@@ -249,6 +243,10 @@ export default {
 
   .btn {
     &--gradient {
+      @include bp(860px) {
+        margin-right: 9px;
+      }
+
       p {
         line-height: 1.4;
       }

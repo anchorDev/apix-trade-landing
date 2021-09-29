@@ -106,8 +106,23 @@ export default {
     display: flex;
     justify-content: space-between;
 
+    @include bp(1200px) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     .step {
       margin-right: 16px;
+
+      @include bp(1200px) {
+        flex: 0 0 40%;
+        margin-right: 24px;
+        margin-bottom: 60px;
+      }
+
+      @include bp(767px) {
+        flex: 0 0 90%;
+      }
 
       &:last-child {
         margin-right: 0;

@@ -62,6 +62,10 @@ export default {
 .about-product {
   padding: 0 0 170px;
 
+  @include bp(1200px) {
+    padding: 0 0 70px;
+  }
+
   &__wrap {
     display: flex;
     flex-direction: column;
@@ -105,8 +109,16 @@ export default {
     justify-content: space-between;
     flex-direction: row;
 
+    @include bp(1200px) {
+      flex-direction: column;
+    }
+
     .img {
       flex: 0 0 67%;
+
+      @include bp(1200px) {
+        margin: 0 auto 15px auto;
+      }
 
       img {
         max-width: 100%;
@@ -119,6 +131,11 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @include bp(1200px) {
+        max-width: 450px;
+        margin: 0 auto;
+      }
 
       h2 {
         font-size: 24px;
