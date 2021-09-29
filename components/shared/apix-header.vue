@@ -198,6 +198,18 @@ export default {
       line-height: 1.73;
       position: relative;
 
+      @include bp(1200px) {
+        font-size: 13px;
+      }
+
+      @include bp(1050px) {
+        font-size: 11px;
+      }
+
+      @include bp(960px) {
+        font-size: 9px;
+      }
+
       &:after {
         content: '';
         position: absolute;
