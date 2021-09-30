@@ -116,18 +116,63 @@ export default {
     }
 
     &:last-child {
+      position: relative;
       margin: -5.5% 0 0 0;
       width: 51%;
 
+      &:after {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        bottom: -2px;
+        right: 50%;
+        z-index: 0;
+        box-shadow: 0.3px 5px 56.6px 2.4px rgba(29, 182, 253, 0.3);
+        border-radius: 11px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        bottom: -2px;
+        right: -2px;
+        z-index: 0;
+        box-shadow: 0.3px 5px 56.6px 2.4px rgba(223, 46, 255, 0.3);
+        border-radius: 11px;
+      }
+
       picture {
+        z-index: 2;
+        position: relative;
         display: flex;
         justify-content: flex-end;
         border-radius: 11px;
-        box-shadow: 0.3px 5px 56.6px 2.4px rgba(223, 46, 255, 0.3);
+        //box-shadow: 0.3px 5px 56.6px 2.4px rgba(223, 46, 255, 0.3);
         border: solid 2.2px #947dfe;
         background-image: linear-gradient(to top, #4ffff9, #19d1ff, #df2eff);
 
+        &:after {
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          bottom: -2px;
+          right: -2px;
+          z-index: 1;
+          background-image: linear-gradient(
+            to right,
+            #4ffff9,
+            #19d1ff,
+            #df2eff
+          );
+          border-radius: 11px;
+        }
+
         img {
+          z-index: 3;
           border-radius: 11px;
           display: block;
           max-width: 100%;

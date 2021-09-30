@@ -44,7 +44,12 @@ export default {
   padding: 73px 38px 34px;
   border-radius: 32px;
   box-shadow: 5.1px 6.1px 16.8px 4.2px rgba(21, 19, 29, 0.43);
-  background: linear-gradient(130deg, #2a3145 0%, #242834 50%);
+  background: linear-gradient(
+    90deg,
+    rgba(78, 145, 255, 0.1) 0%,
+    rgba(36, 40, 52, 1) 50%,
+    rgba(78, 145, 255, 0.1) 100%
+  );
 
   .step-number {
     position: absolute;

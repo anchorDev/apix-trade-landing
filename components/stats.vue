@@ -21,7 +21,7 @@
       </ul>
     </div>
 
-    <p class="stats__description">*{{ $t('stats.description') }}</p>
+    <p class="stats__description">*{{ $t('index.stats.description') }}</p>
   </section>
 </template>
 
@@ -38,6 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 .stats {
+  position: relative;
   padding: 53px 80px;
   margin: -42px auto 0;
   box-shadow: 5.1px 6.1px 16.8px 4.2px rgba(21, 19, 29, 0.43);
@@ -49,6 +50,38 @@ export default {
     #252935 64%,
     #392751 100%
   );
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(51, 53, 102, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(51, 53, 102, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
 
   &__list {
     display: flex;
@@ -132,6 +165,7 @@ export default {
           background-repeat: no-repeat;
           background-origin: content-box;
         }
+
         &:not(:last-child) {
           margin: 0 0 30px;
         }
