@@ -19,7 +19,12 @@
         :description="step.description"
       >
         <template #image>
-          <component :is="step.image" />
+          <component
+            :is="step.image"
+            :style="{
+              width: 60,
+            }"
+          />
         </template>
       </step>
     </ul>
@@ -30,6 +35,7 @@
 // icons
 import Hero3 from 'assets/svg/hero3.svg?inline'
 import Cabinet2 from '@/assets/svg/cabinet2.svg?inline'
+import Profile from '@/assets/svg/invalid-name.svg?inline'
 
 import Step from '~/components/UI/Step'
 
@@ -41,6 +47,7 @@ export default {
     Step,
     Hero3,
     Cabinet2,
+    Profile,
   },
   data() {
     return {
@@ -51,7 +58,7 @@ export default {
           description: this.$t(
             'index.stepsOfWorkWithSystem.steps[0].description'
           ),
-          image: Hero3,
+          image: Profile,
         },
         {
           stepNumber: 2,
