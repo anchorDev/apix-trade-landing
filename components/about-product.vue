@@ -88,11 +88,11 @@ export default {
       background-size: 99% 99%;
       background-position: 50%;
       background-repeat: no-repeat;
-      margin: 0 0 30px;
+      margin: 0 0 15px;
     }
 
     p {
-      margin: 0 auto 54px;
+      margin: 0 auto -25px;
       text-align: center;
       max-width: 930px;
       background-image: linear-gradient(to right, #6dcaff, #c663ff),
@@ -114,7 +114,7 @@ export default {
     }
 
     .img {
-      flex: 0 0 67%;
+      flex: 0 0 70%;
 
       @include bp(1200px) {
         margin: 0 auto 15px auto;
@@ -131,6 +131,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding-top: 65px;
 
       @include bp(1200px) {
         max-width: 450px;
@@ -142,13 +143,14 @@ export default {
         line-height: 1.25;
         letter-spacing: 1.44px;
         margin-bottom: 27px;
+        font-weight: 700;
       }
 
       p {
         color: #6e7594;
-        margin-bottom: 39px;
+        margin-bottom: 70px;
         font-size: 15px;
-        font-weight: 100;
+        font-weight: 400;
 
         &:last-child {
           margin-bottom: 0;
@@ -156,7 +158,7 @@ export default {
 
         span {
           color: #99a7b8;
-          font-weight: normal;
+          font-weight: bolder;
         }
       }
     }

@@ -28,7 +28,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 19px 140px 20px;
+  padding: 19px 111px 20px;
   background: linear-gradient(
     166deg,
     #2c3345 0%,
