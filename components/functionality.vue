@@ -11,20 +11,36 @@
       ></p>
       <div class="functionality__wrap">
         <div class="functionality__col">
-          <picture>
+          <video ref="video" muted loop autoplay playsinline>
             <source
-              srcset="
-                ~assets/img/functionality.png,
-                ~assets/img/functionality@2x.png 2x
+              src="~assets/video/functionaly/video.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="~assets/video/functionaly/video.webm"
+              type="video/webm"
+            />
+            <source
+              :src="require('~/assets/video/functionaly/video.mov').default"
+              type="video/quicktime"
+            />
+          </video>
+          <video ref="video" muted loop autoplay playsinline>
+            <source
+              src="~assets/video/functionaly/video-mobile.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="~assets/video/functionaly/video-mobile.webm"
+              type="video/webm"
+            />
+            <source
+              :src="
+                require('~/assets/video/functionaly/video-mobile.mov').default
               "
+              type="video/quicktime"
             />
-            <img
-              v-in-viewport.once
-              class="functionality__img fade-in"
-              src="~assets/img/functionality.png"
-              alt="apix.trade"
-            />
-          </picture>
+          </video>
         </div>
         <div class="functionality__col">
           <h5 v-in-viewport.once class="functionality__sub-title fade-in">
@@ -115,15 +131,30 @@ export default {
     }
   }
 
-  &__img {
-    max-width: 100%;
+  video {
     position: relative;
-    left: 2.5%;
-    margin-top: 10px;
+    z-index: 1;
+    max-width: 100%;
+    mix-blend-mode: screen;
+
+    &:nth-child(2) {
+      display: none;
+    }
+
+    @include bp(640px) {
+      display: none;
+      &:nth-child(2) {
+        display: block;
+      }
+    }
   }
 
   &__sub-title {
     margin: 0 0 30px;
+
+    @include bp(1200px) {
+      text-align: center;
+    }
   }
 
   &__list {
