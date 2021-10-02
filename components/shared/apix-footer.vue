@@ -39,9 +39,12 @@
             <arrow class="arrow" />
           </div>
 
-          <button class="header__btn btn btn--header">
+          <a
+            class="header__btn btn btn--header"
+            href="https://apix.trade/lk/auth.php"
+          >
             {{ $t('index.header.singInBtn') }}
-          </button>
+          </a>
 
           <button class="header__btn btn btn--gradient">
             <p>
