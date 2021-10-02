@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 .request-demo {
-  margin: -90px auto 156px;
+  margin: 0 auto 156px;
   display: flex;
   align-items: center;
   justify-content: space-between;

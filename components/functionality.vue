@@ -119,7 +119,7 @@ export default {
 
   &__col {
     &:first-child {
-      margin: -13% 0 0 -14%;
+      margin: 0 0 0 0;
     }
 
     &:last-child {
@@ -132,6 +132,7 @@ export default {
   }
 
   video {
+    margin-top: -100px;
     position: relative;
     z-index: 1;
     max-width: 100%;
