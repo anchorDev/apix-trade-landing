@@ -135,7 +135,7 @@ export default {
 
   @include bp(1200px) {
     padding: 40px 30px;
-    margin: -40px auto 80px;
+    margin: -40px auto 20px;
     &__list {
       flex-wrap: wrap;
 

@@ -104,6 +104,10 @@ export default {
 .calculator {
   padding: 0 0 160px;
 
+  @include bp(787px) {
+    padding: 60px 0 80px;
+  }
+
   &__wrap {
     display: flex;
     flex-direction: column;

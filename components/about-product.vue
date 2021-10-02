@@ -117,6 +117,7 @@ export default {
       flex: 0 0 861px;
 
       @include bp(1200px) {
+        flex: 0 0 auto;
         margin: 0 auto 15px auto;
       }
 
