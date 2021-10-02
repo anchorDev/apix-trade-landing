@@ -137,7 +137,7 @@ export default {
 
       @include bp(1200px) {
         max-width: 450px;
-        margin: 0 auto;
+        margin: 0 40px;
       }
 
       h2 {
