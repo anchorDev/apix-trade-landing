@@ -108,6 +108,7 @@ export default {
   .container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
     @include bp(1200px) {
       flex-direction: column;
