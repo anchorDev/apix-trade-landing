@@ -4,13 +4,15 @@
       <span>{{ stepNumber }}</span>
     </div>
 
-    <h1 v-if="title">
-      {{ title }}
-    </h1>
+    <div>
+      <h1 v-if="title">
+        {{ title }}
+      </h1>
 
-    <p v-if="description">
-      {{ description }}
-    </p>
+      <p v-if="description">
+        {{ description }}
+      </p>
+    </div>
 
     <picture>
       <slot name="image" class="image" />
@@ -50,6 +52,9 @@ export default {
     rgba(36, 40, 52, 1) 50%,
     rgba(78, 145, 255, 0.1) 100%
   );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .step-number {
     position: absolute;
@@ -83,18 +88,20 @@ export default {
     font-weight: bold;
     color: #99a7b8;
     margin-bottom: 13px;
+    letter-spacing: 1.44px;
   }
 
   p {
     text-align: center;
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 600;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.6;
     letter-spacing: 0.9px;
     color: #99a7b8;
     margin-bottom: 33px;
+    padding: 0 25px;
   }
 
   picture {

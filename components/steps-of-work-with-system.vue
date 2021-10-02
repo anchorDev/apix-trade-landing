@@ -90,7 +90,7 @@ export default {
   align-items: center;
 
   h2 {
-    margin: 0 auto 108px;
+    margin: 0 auto 95px;
     text-align: center;
     background-image: linear-gradient(
       90deg,

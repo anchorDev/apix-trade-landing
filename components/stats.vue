@@ -115,21 +115,22 @@ export default {
       p {
         margin: 4px 0 0;
         color: #99a7b8;
+        font-weight: 600;
       }
     }
   }
 
   &__description {
     font-size: 12px;
-    font-weight: 100;
     font-stretch: normal;
-    font-style: normal;
     line-height: 2;
     letter-spacing: 0.72px;
     text-align: left;
     color: #626e7d;
-    margin-bottom: 163px;
+    margin-bottom: 130px;
     padding: 17px 0 0 32px;
+    font-style: italic;
+    font-weight: 600;
   }
 
   @include bp(1200px) {

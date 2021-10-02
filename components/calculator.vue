@@ -102,7 +102,7 @@ export default {
 
 <style lang="scss" scoped>
 .calculator {
-  padding: 0 0 170px;
+  padding: 0 0 160px;
 
   &__wrap {
     display: flex;
@@ -143,6 +143,7 @@ export default {
       #252935 64%,
       #392751 100%
     );
+    justify-content: space-between;
 
     @include bp($lg) {
       padding: 53px 30px;
@@ -153,7 +154,7 @@ export default {
   }
 
   &__col {
-    flex: 1 0 322px;
+    flex: 0 0 270px;
 
     &:first-child {
       margin: 0 45px 0 0;
@@ -172,15 +173,18 @@ export default {
     }
 
     p {
+      font-weight: 600;
       color: #99a7b8;
+      font-size: 16px;
     }
 
     &--long {
-      flex: 1 0 calc(100% - 367px);
+      flex: 0 0 calc(100% - 375px);
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      //justify-content: center;
       align-items: center;
+      padding-top: 25px;
 
       h5 {
         align-self: flex-start;
@@ -203,7 +207,7 @@ export default {
   &__input {
     &:nth-child(2),
     &:nth-child(4) {
-      margin: 0 0 25px;
+      margin: 0 0 17px;
     }
   }
 
@@ -220,7 +224,8 @@ export default {
     }
 
     &__col {
-      padding: 53px 0 47px 41px;
+      text-align: center;
+      padding: 53px 0 47px 0;
       border-radius: $border-radius-card-lg;
       box-shadow: 5.1px 6.1px 16.8px 4.2px rgba(21, 19, 29, 0.43);
       background: linear-gradient(
@@ -256,6 +261,10 @@ export default {
           line-height: 0.75;
           letter-spacing: 1.08px;
         }
+      }
+
+      p {
+        text-align: center;
       }
     }
   }

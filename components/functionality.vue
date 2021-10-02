@@ -86,7 +86,7 @@ export default {
 
   .wrapper > p {
     margin: 0 auto 85px auto;
-    max-width: 830px;
+    max-width: 840px;
     white-space: pre-line;
     background-image: linear-gradient(to right, #6dcaff, #c663ff),
       linear-gradient(to left, #bfbccd, #bfbccd);
@@ -94,6 +94,7 @@ export default {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    font-weight: 600;
   }
 
   &__wrap {
@@ -107,7 +108,7 @@ export default {
 
     &:last-child {
       text-align: left;
-      padding: 63px 0 0;
+      padding: 20px 0 0;
       flex: 1 0 450px;
       max-width: 450px;
       width: 100%;
@@ -118,6 +119,7 @@ export default {
     max-width: 100%;
     position: relative;
     left: 2.5%;
+    margin-top: 10px;
   }
 
   &__sub-title {
@@ -132,8 +134,18 @@ export default {
       padding: 0 0 0 30px;
       color: #6e7594;
 
-      &:not(:last-child) {
-        margin: 0 0 30px;
+      &:first-child,
+      &:nth-child(2) {
+        margin: 0 0 50px;
+      }
+
+      p {
+        font-weight: 600;
+
+        ::v-deep b {
+          font-weight: 600;
+          color: #99a7b8;
+        }
       }
     }
   }
@@ -148,6 +160,7 @@ export default {
       &:first-child {
         margin: -10% 0;
       }
+
       &:last-child {
         padding: 0;
         flex: 1;

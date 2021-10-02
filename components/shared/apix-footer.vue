@@ -38,6 +38,16 @@
             <p>{{ $i18n.locale }}</p>
             <arrow class="arrow" />
           </div>
+
+          <button class="header__btn btn btn--header">
+            {{ $t('index.header.singInBtn') }}
+          </button>
+
+          <button class="header__btn btn btn--gradient">
+            <p>
+              {{ $t('index.header.singUpBtn') }}
+            </p>
+          </button>
         </div>
       </div>
     </div>
@@ -145,7 +155,7 @@ export default {
       align-items: center;
       color: #dae1e9;
       cursor: pointer;
-      margin: 0 0 0 25px;
+      margin: 0 24px 0 25px;
 
       p {
         text-transform: uppercase;
@@ -158,6 +168,10 @@ export default {
         transform: scale(-1);
       }
     }
+  }
+
+  .btn:not(:last-child) {
+    margin-right: 9px;
   }
 
   @include bp(1200px) {
@@ -193,6 +207,10 @@ export default {
         }
       }
     }
+  }
+
+  .btn--gradient {
+    padding: 14px 24px 11px 19px;
   }
 }
 </style>

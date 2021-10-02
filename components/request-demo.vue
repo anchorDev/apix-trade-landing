@@ -22,11 +22,11 @@ export default {
 
 <style lang="scss" scoped>
 .request-demo {
-  margin: 0 auto 135px;
+  margin: -90px auto 156px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 19px 140px 20px;
+  justify-content: space-between;
+  padding: 19px 156px 20px 191px;
   background: linear-gradient(
     166deg,
     #2c3345 0%,

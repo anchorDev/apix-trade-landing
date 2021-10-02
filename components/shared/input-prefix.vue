@@ -54,13 +54,14 @@ export default {
   display: block;
   width: 100%;
   position: relative;
+
   &__input {
     width: 100%;
     border-radius: 26px;
     box-shadow: 5.1px 6.1px 16.8px 4.2px rgba(21, 19, 29, 0.43);
     border: solid 1px #99a7b8;
     background-color: transparent;
-    padding: 14px 60px 13px 25px;
+    padding: 10px 60px 10px 25px;
     font-size: 15px;
     font-weight: 300;
     line-height: 1.6;
@@ -77,6 +78,7 @@ export default {
       -moz-appearance: textfield;
     }
   }
+
   &__label {
     display: flex;
     justify-content: center;

@@ -15,7 +15,7 @@
       />
     </div>
 
-    <div class="container wrapper">
+    <div class="container">
       <div class="img">
         <picture>
           <source
@@ -30,8 +30,8 @@
 
       <div class="information">
         <h2>
-          Наш продукт объединяет трейдеров и инвесторов для защищенного
-          сотрудничества
+          Наш продукт объединяет трейдеров и инвесторов<br />
+          для защищенного сотрудничества
         </h2>
 
         <p>
@@ -88,25 +88,25 @@ export default {
       background-size: 99% 99%;
       background-position: 50%;
       background-repeat: no-repeat;
-      margin: 0 0 15px;
+      margin: 0 0 8px;
     }
 
     p {
       margin: 0 auto -25px;
       text-align: center;
-      max-width: 930px;
+      max-width: 960px;
       background-image: linear-gradient(to right, #6dcaff, #c663ff),
         linear-gradient(to left, #bfbccd, #bfbccd);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
+      font-weight: 600;
     }
   }
 
   .container {
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
 
     @include bp(1200px) {
@@ -114,7 +114,7 @@ export default {
     }
 
     .img {
-      flex: 0 0 70%;
+      flex: 0 0 861px;
 
       @include bp(1200px) {
         margin: 0 auto 15px auto;
@@ -126,12 +126,13 @@ export default {
     }
 
     .information {
-      flex: 0 0 35%;
+      flex: 0 0 440px;
       color: #99a7b8;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: 65px;
+      padding-top: 95px;
+      margin-left: -14px;
 
       @include bp(1200px) {
         max-width: 450px;
@@ -148,7 +149,7 @@ export default {
 
       p {
         color: #6e7594;
-        margin-bottom: 70px;
+        margin-bottom: 39px;
         font-size: 15px;
         font-weight: 400;
 

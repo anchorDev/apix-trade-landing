@@ -102,6 +102,7 @@ export default {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    font-weight: 600;
   }
 
   &__wrap {
@@ -118,7 +119,7 @@ export default {
     &:last-child {
       position: relative;
       margin: -5.5% 0 0 0;
-      width: 51%;
+      width: 52.5%;
 
       &:after {
         content: '';
@@ -198,6 +199,7 @@ export default {
 
       p {
         white-space: pre-line;
+        font-weight: 600;
       }
 
       svg {

@@ -48,6 +48,7 @@ export default {
     color: #dae1e9;
     margin: 0 auto 25px;
     text-shadow: 0 0 10px rgba(29, 182, 253, 0.52);
+    font-size: 24px;
   }
 
   p.description {
@@ -55,7 +56,7 @@ export default {
     text-align: center;
     color: #fefefe;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 600;
     margin-bottom: 27px;
   }
 }

@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .registration-offer {
-  margin: 0 auto 135px;
+  margin: 0 auto 160px;
   display: flex;
   align-items: center;
   justify-content: center;
