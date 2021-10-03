@@ -61,9 +61,9 @@ export default {
     height: 2px;
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0) 0%,
+      rgba(51, 53, 102, 0) 0%,
       rgba(51, 53, 102, 1) 50%,
-      rgba(255, 255, 255, 0) 100%
+      rgba(51, 53, 102, 0) 100%
     );
   }
 
@@ -77,9 +77,9 @@ export default {
     height: 2px;
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0) 0%,
+      rgba(51, 53, 102, 0) 0%,
       rgba(51, 53, 102, 1) 50%,
-      rgba(255, 255, 255, 0) 100%
+      rgba(51, 53, 102, 0) 100%
     );
   }
 
