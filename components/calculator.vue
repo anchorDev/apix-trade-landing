@@ -81,20 +81,7 @@ export default {
       return amountCommission.toFixed(0)
     },
     oneYear() {
-      let currentCapital = this.capital
-
-      return Array(12)
-        .fill(0)
-        .reduce((acc) => {
-          const capitalPercent = currentCapital / 100
-          const oneMonthProfit = capitalPercent * this.average_income
-          const amountCommission = (oneMonthProfit / 100) * this.commission
-
-          currentCapital += oneMonthProfit
-
-          const total = parseInt(acc, 10) + amountCommission
-          return total.toFixed(0)
-        }, 0)
+      return this.oneMonth * 12
     },
   },
 }
