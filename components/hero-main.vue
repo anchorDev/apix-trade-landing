@@ -27,7 +27,7 @@
         </li>
       </ul>
       <div v-in-viewport.once class="hero-main__action fade-in">
-        <button class="btn btn--gradient">
+        <button class="btn btn--gradient" @click="onRegister">
           <picture>
             <source
               srcset="~assets/img/logo_btn.png, ~assets/img/logo_btn@2x.png 2x"
@@ -70,6 +70,7 @@
 import Hero1 from 'assets/svg/hero1.svg?inline'
 import Hero2 from 'assets/svg/hero2.svg?inline'
 import Hero3 from 'assets/svg/hero3.svg?inline'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'HeroMain',
@@ -82,6 +83,12 @@ export default {
     return {
       isLoaded: false,
     }
+  },
+  methods: {
+    ...mapMutations('popup', ['setPopup']),
+    onRegister() {
+      this.setPopup('PopupRegistration')
+    },
   },
 }
 </script>

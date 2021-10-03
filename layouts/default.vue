@@ -1,5 +1,6 @@
 <template>
   <div>
+    <popup-worker />
     <div class="overlay overlay-1"></div>
     <div class="overlay overlay-2"></div>
     <div class="overlay overlay-3"></div>
@@ -13,10 +14,13 @@
 <script>
 import ApixHeader from '@/components/shared/apix-header'
 import ApixFooter from '@/components/shared/apix-footer'
+import PopupWorker from '@/components/hoc/popup-worker'
+
 export default {
   components: {
     ApixHeader,
     ApixFooter,
+    PopupWorker,
   },
 }
 </script>

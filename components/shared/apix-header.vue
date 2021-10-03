@@ -44,7 +44,7 @@
           {{ $t('index.header.singInBtn') }}
         </a>
 
-        <button class="header__btn btn btn--gradient">
+        <button class="header__btn btn btn--gradient" @click="onRegister">
           <p>
             {{ $t('index.header.singUpBtn') }}
           </p>
@@ -95,6 +95,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 import Arrow from '@/assets/svg/arrow.svg?inline'
 
 export default {
@@ -125,6 +126,7 @@ export default {
     this.onScroll()
   },
   methods: {
+    ...mapMutations('popup', ['setPopup']),
     throttle(func, timeFrame) {
       let lastTime = 0
       return function (...args) {
@@ -150,6 +152,9 @@ export default {
     },
     toggleBurger() {
       this.isBurgerOpen = !this.isBurgerOpen
+    },
+    onRegister() {
+      this.setPopup('PopupRegistration')
     },
   },
 }
