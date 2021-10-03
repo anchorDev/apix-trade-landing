@@ -61,7 +61,7 @@ import PopupShell from '@/components/hoc/popup-shell'
 import BaseInput from '@/components/UI/BaseInput'
 import BaseCheckbox from '@/components/UI/BaseCheckbox'
 import BaseButton from '@/components/UI/BaseButton'
-import { mapMutations } from 'vuex'
+import { mapMutations, mapActions } from 'vuex'
 
 import isEmail from 'is-email'
 
@@ -108,11 +108,12 @@ export default {
   },
   methods: {
     ...mapMutations('popup', ['setPopup']),
+    ...mapActions('popup', ['fetchRegistration']),
     onClose() {
       this.setPopup(null)
     },
     onSubmit() {
-      console.log('### onSubmit', this.form)
+      this.fetchRegistration(this.form)
     },
   },
 }
