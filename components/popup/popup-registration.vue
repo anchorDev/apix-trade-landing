@@ -5,27 +5,35 @@
 
       <form action="#" @submit="onSubmit">
         <div>
-          <base-input v-model="form.email" label="Ваш Емайл" />
+          <base-input
+            v-model="form.email"
+            label="Ваш E-mail"
+            :is-require="true"
+          />
         </div>
 
         <div>
           <base-input
             v-model="form.telegramChannel"
-            label="Ваш телеграм канал"
+            label="Ваш Telegram канал"
+            :is-require="true"
           />
         </div>
 
         <div>
           <base-input
             v-model="form.personalTelegram"
-            label="Ваш телеграм для связи"
+            label="Ваш Telegram для связи"
+            :is-require="true"
           />
         </div>
 
         <div>
           <base-checkbox
-            v-model="form.iWantDemoAccount"
-            label="Хочу DEMO аккаунт"
+            v-model="form.agreeWithTheTermsOfUse"
+            class="agreeWithTheTermsOfUse"
+            label="Ознакомился и согласен с условиями пользования и политикой конфиденциальности"
+            :is-require="true"
           />
         </div>
 
@@ -38,6 +46,11 @@
             Отправить
           </base-button>
         </div>
+
+        <div class="require-description">
+          <span class="require-char">*</span>
+          - обязательные поля для заполнения
+        </div>
       </form>
     </popup-shell>
   </div>
@@ -49,6 +62,8 @@ import BaseInput from '@/components/UI/BaseInput'
 import BaseCheckbox from '@/components/UI/BaseCheckbox'
 import BaseButton from '@/components/UI/BaseButton'
 import { mapMutations } from 'vuex'
+
+import isEmail from 'is-email'
 
 export default {
   name: 'PopupRegistration',
@@ -65,16 +80,29 @@ export default {
         telegramChannel: '',
         personalTelegram: '',
         iWantDemoAccount: false,
+        agreeWithTheTermsOfUse: true,
       },
     }
   },
   computed: {
     isValidForm() {
-      const { email, telegramChannel, personalTelegram } = this.form
+      const {
+        email,
+        telegramChannel,
+        personalTelegram,
+        agreeWithTheTermsOfUse,
+      } = this.form
+
+      const tgRegex = /\s/g
+
       return !!(
         email.length &&
+        isEmail(email) &&
         telegramChannel.length &&
-        personalTelegram.length
+        !tgRegex.test(telegramChannel) &&
+        personalTelegram.length &&
+        !tgRegex.test(personalTelegram) &&
+        agreeWithTheTermsOfUse
       )
     },
   },
@@ -110,6 +138,22 @@ export default {
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    ::v-deep .agreeWithTheTermsOfUse {
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .require-description {
+    color: #535353;
+    font-size: 14px;
+    font-weight: 600;
+
+    span.require-char {
+      color: red;
     }
   }
 }

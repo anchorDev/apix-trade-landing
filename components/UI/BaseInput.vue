@@ -1,6 +1,10 @@
 <template>
   <div data-vue-component-name="BaseInput">
-    <label>{{ label }}</label>
+    <label>
+      {{ label }}
+
+      <span v-if="isRequire" class="require"> * </span>
+    </label>
 
     <input
       type="text"
@@ -22,6 +26,10 @@ export default {
       type: String,
       default: '',
     },
+    isRequire: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
@@ -35,6 +43,10 @@ export default {
     color: #99a7b8;
     display: block;
     margin-bottom: 23px;
+
+    .require {
+      color: red;
+    }
   }
 
   input {

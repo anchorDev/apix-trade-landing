@@ -2,7 +2,11 @@
   <div data-vue-component-name="BaseCheckbox" @click="onClick">
     <div class="custom-checkbox" :class="{ active: value }" />
 
-    <span>{{ label }}</span>
+    <span>
+      {{ label }}
+
+      <span v-if="isRequire" class="require"> * </span>
+    </span>
   </div>
 </template>
 
@@ -15,6 +19,10 @@ export default {
       default: '',
     },
     value: {
+      type: Boolean,
+      default: false,
+    },
+    isRequire: {
       type: Boolean,
       default: false,
     },
@@ -36,6 +44,7 @@ export default {
   .custom-checkbox {
     position: relative;
     width: 25px;
+    min-width: 25px;
     height: 25px;
     box-shadow: inset 0 0 5.2px 1.8px rgba(186, 74, 255, 0.5);
     border: solid 1px #99a7b8;
@@ -79,6 +88,10 @@ export default {
     line-height: 1.6;
     letter-spacing: 1.2px;
     color: #99a7b8;
+
+    .require {
+      color: red;
+    }
   }
 }
 </style>
