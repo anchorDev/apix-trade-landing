@@ -4,6 +4,11 @@
       <h4>Регистрация</h4>
 
       <form action="#" @submit="onSubmit">
+        <p
+          v-if="message"
+          :class="['form-message', message.type]"
+          v-html="message.text"
+        />
         <div>
           <base-input
             v-model="form.email"
@@ -65,6 +70,14 @@ import { mapMutations, mapActions } from 'vuex'
 
 import isEmail from 'is-email'
 
+const defaultForm = {
+  email: '',
+  telegramChannel: '',
+  personalTelegram: '',
+  iWantDemoAccount: false,
+  agreeWithTheTermsOfUse: true,
+}
+
 export default {
   name: 'PopupRegistration',
   components: {
@@ -75,17 +88,15 @@ export default {
   },
   data() {
     return {
-      form: {
-        email: '',
-        telegramChannel: '',
-        personalTelegram: '',
-        iWantDemoAccount: false,
-        agreeWithTheTermsOfUse: true,
-      },
+      isLoading: false,
+      message: null,
+      form: {},
     }
   },
   computed: {
     isValidForm() {
+      if (this._.isEmpty(this.form)) return false
+
       const {
         email,
         telegramChannel,
@@ -102,9 +113,23 @@ export default {
         !tgRegex.test(telegramChannel) &&
         personalTelegram.length &&
         !tgRegex.test(personalTelegram) &&
-        agreeWithTheTermsOfUse
+        agreeWithTheTermsOfUse &&
+        !this.isLoading
       )
     },
+  },
+  watch: {
+    form: {
+      deep: true,
+      handler() {
+        if (this.message) {
+          this.message = null
+        }
+      },
+    },
+  },
+  mounted() {
+    this.setDefaultForm()
   },
   methods: {
     ...mapMutations('popup', ['setPopup']),
@@ -113,7 +138,34 @@ export default {
       this.setPopup(null)
     },
     onSubmit() {
+      this.isLoading = true
+      this.message = {
+        type: 'loading',
+        text: 'Отправка запроса',
+      }
+
       this.fetchRegistration(this.form)
+        .then(this.onSuccessRegistration)
+        .catch(this.onErrorRegistration)
+        .then(() => (this.isLoading = false))
+    },
+    onSuccessRegistration() {
+      this.setDefaultForm()
+      this.message = {
+        type: 'success',
+        text:
+          'Ваша заявка отправлена.<br>Скоро наш менеджер с вами свяжется в Telegram',
+      }
+    },
+    onErrorRegistration() {
+      this.message = {
+        type: 'error',
+        text:
+          'Произошла ошибка отправки заявки на регистрацию.<br>Попробуйте еще раз',
+      }
+    },
+    setDefaultForm() {
+      this.form = this._.cloneDeep(defaultForm)
     },
   },
 }
@@ -132,6 +184,27 @@ export default {
     line-height: 1;
     letter-spacing: 1.44px;
     color: #99a7b8;
+  }
+
+  form {
+    p.form-message {
+      text-align: center;
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 12px;
+
+      &.success {
+        color: #c5ffc7;
+      }
+
+      &.error {
+        color: #ffccc5;
+      }
+
+      &.loading {
+        color: #ffefc5;
+      }
+    }
   }
 
   form > div {

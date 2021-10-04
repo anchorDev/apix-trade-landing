@@ -40,6 +40,7 @@ export default {
   plugins: [
     { src: '@/plugins/vue-scroll-reveal', ssr: false },
     { src: '@/plugins/v-click-outside', ssr: false },
+    '~/plugins/lodash.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
