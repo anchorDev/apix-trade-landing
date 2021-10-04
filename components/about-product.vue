@@ -115,7 +115,7 @@ export default {
     }
 
     .img {
-      flex: 0 0 53%;
+      flex: 0 0 861px;
 
       @include bp(1200px) {
         flex: 0 0 auto;
@@ -128,7 +128,7 @@ export default {
     }
 
     .information {
-      flex: 0 0 27.5%;
+      flex: 0 0 450px;
       color: #99a7b8;
       display: flex;
       flex-direction: column;

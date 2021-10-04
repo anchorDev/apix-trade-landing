@@ -49,7 +49,7 @@ export default {
   background: linear-gradient(
     90deg,
     rgba(78, 145, 255, 0.1) 0%,
-    rgba(36, 40, 52, 1) 50%,
+    rgba(78, 145, 255, 0) 50%,
     rgba(78, 145, 255, 0.1) 100%
   );
   display: flex;

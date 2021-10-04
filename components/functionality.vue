@@ -111,6 +111,7 @@ export default {
     -webkit-text-fill-color: transparent;
     color: transparent;
     font-weight: 600;
+    line-height: 1;
   }
 
   &__wrap {
