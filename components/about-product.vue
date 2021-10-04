@@ -128,13 +128,13 @@ export default {
     }
 
     .information {
-      flex: 0 0 450px;
+      flex: 0 0 465px;
       color: #99a7b8;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding-top: 95px;
-      margin-left: -14px;
+      margin-left: -70px;
 
       @include bp(1200px) {
         max-width: 450px;
@@ -153,7 +153,7 @@ export default {
         color: #6e7594;
         margin-bottom: 39px;
         font-size: 15px;
-        font-weight: 600;
+        font-weight: 550;
 
         &:last-child {
           margin-bottom: 0;
