@@ -144,7 +144,7 @@ export default {
   },
 
   router: {
-    base: 'apix-trade-landing',
+    base: '/apix-trade-landing',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
