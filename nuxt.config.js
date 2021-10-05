@@ -139,6 +139,10 @@ export default {
     host: '0', // default: localhost
   },
 
+  router: {
+    base: 'apix-trade-landing',
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     // postcss: {
