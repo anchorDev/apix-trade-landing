@@ -139,6 +139,10 @@ export default {
     host: '0', // default: localhost
   },
 
+  generate: {
+    dir: 'docs',
+  },
+
   router: {
     base: 'apix-trade-landing',
   },
