@@ -3,20 +3,20 @@
     <div v-in-viewport.once class="stats fade-in">
       <ul class="stats__list">
         <li class="stats__list-item">
-          <h3>527,122,529</h3>
-          <p class="medium">{{ $t('index.stats.traiders') }}</p>
+          <h3>17</h3>
+          <p>{{ $t('index.stats.traiders') }}</p>
         </li>
         <li class="stats__list-item">
-          <h3>467,142,599</h3>
-          <p class="medium">{{ $t('index.stats.investors') }}</p>
+          <h3>422</h3>
+          <p>{{ $t('index.stats.investors') }}</p>
         </li>
         <li class="stats__list-item">
-          <h3><span>$</span> 25,892,345</h3>
-          <p class="medium">{{ $t('index.stats.capital') }}</p>
+          <h3><span>$</span> 4,891,914</h3>
+          <p>{{ $t('index.stats.capital') }}</p>
         </li>
         <li class="stats__list-item">
-          <h3><span>$</span> 25,892,345</h3>
-          <p class="medium">{{ $t('index.stats.income') }}</p>
+          <h3><span>$</span> 1,922,428</h3>
+          <p>{{ $t('index.stats.income') }}</p>
         </li>
       </ul>
     </div>
@@ -40,7 +40,7 @@ export default {
 .stats {
   position: relative;
   padding: 53px 80px;
-  margin: -42px auto 0;
+  margin: 0 auto;
   box-shadow: 5.1px 6.1px 16.8px 4.2px rgba(21, 19, 29, 0.43);
   border-radius: $border-radius-card-lg;
   background: linear-gradient(
@@ -91,6 +91,7 @@ export default {
       flex: 0 0 auto;
 
       h3 {
+        text-align: center;
         text-shadow: 0 0 9px rgba(29, 182, 253, 0.52);
         background: linear-gradient(
           90deg,
@@ -115,7 +116,7 @@ export default {
       p {
         margin: 4px 0 0;
         color: #99a7b8;
-        font-weight: 600;
+        text-align: center;
       }
     }
   }

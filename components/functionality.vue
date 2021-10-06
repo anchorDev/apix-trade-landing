@@ -75,7 +75,6 @@ export default {
 
 <style lang="scss" scoped>
 .functionality {
-  padding: 0 0 40px;
   text-align: center;
 
   h2 {
@@ -91,7 +90,7 @@ export default {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 0 auto 10px;
+    margin: 0 auto 4px;
   }
 
   .wrapper {
@@ -110,8 +109,7 @@ export default {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    font-weight: 600;
-    line-height: 1;
+    line-height: 1.7;
   }
 
   &__wrap {
@@ -120,24 +118,24 @@ export default {
 
   &__col {
     &:first-child {
-      margin: 0 0 0 0;
+      margin: 0 0 -14px -14%;
     }
 
     &:last-child {
       text-align: left;
       padding: 20px 0 0;
-      flex: 1 0 450px;
-      max-width: 450px;
+      flex: 1 0 437px;
+      max-width: 437px;
       width: 100%;
     }
   }
 
   video {
-    margin-top: -100px;
     position: relative;
     z-index: 1;
     max-width: 100%;
     mix-blend-mode: screen;
+    margin: -100px 0 0 36px;
 
     &:nth-child(2) {
       display: none;
@@ -153,6 +151,7 @@ export default {
 
   &__sub-title {
     margin: 0 0 30px;
+    letter-spacing: 1.44px;
 
     @include bp(1200px) {
       text-align: center;
@@ -164,17 +163,26 @@ export default {
 
     &-item {
       display: flex;
-      padding: 0 0 0 30px;
       color: #6e7594;
+
+      &:nth-child(1) {
+        max-width: 405px;
+      }
+
+      &:nth-child(2) {
+        max-width: 453px;
+      }
+
+      &:nth-child(3) {
+        max-width: 418px;
+      }
 
       &:first-child,
       &:nth-child(2) {
-        margin: 0 0 50px;
+        margin: 0 0 30px;
       }
 
       p {
-        font-weight: 600;
-
         ::v-deep b {
           font-weight: 600;
           color: #99a7b8;

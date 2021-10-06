@@ -46,7 +46,7 @@ export default {
   h4 {
     max-width: 656px;
     color: #dae1e9;
-    margin: 0 auto 25px;
+    margin: 0 auto 19px;
     text-shadow: 0 0 10px rgba(29, 182, 253, 0.52);
     font-size: 24px;
   }
@@ -55,9 +55,8 @@ export default {
     max-width: 680px;
     text-align: center;
     color: #fefefe;
-    font-size: 15px;
-    font-weight: 600;
     margin-bottom: 27px;
+    letter-spacing: 0.6px;
   }
 }
 </style>

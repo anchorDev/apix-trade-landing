@@ -15,7 +15,7 @@
       />
     </div>
 
-    <div class="container">
+    <div class="container wrapper">
       <div class="img">
         <picture>
           <source
@@ -115,7 +115,8 @@ export default {
     }
 
     .img {
-      flex: 0 0 861px;
+      flex: 1;
+      margin: 0 0 0 -10%;
 
       @include bp(1200px) {
         flex: 0 0 auto;
@@ -124,17 +125,17 @@ export default {
 
       img {
         max-width: 100%;
+        margin: 0 0 0 32px;
       }
     }
 
     .information {
-      flex: 0 0 465px;
+      flex: 0 0 482px;
       color: #99a7b8;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: 95px;
-      margin-left: -70px;
+      padding-top: 65px;
 
       @include bp(1200px) {
         max-width: 450px;
@@ -145,15 +146,22 @@ export default {
         font-size: 24px;
         line-height: 1.25;
         letter-spacing: 1.44px;
-        margin-bottom: 27px;
+        margin-bottom: 19px;
         font-weight: 700;
+        max-width: 440px;
       }
 
       p {
         color: #6e7594;
-        margin-bottom: 39px;
+        margin-bottom: 28px;
         font-size: 15px;
-        font-weight: 600;
+        font-weight: 100;
+        line-height: 1.6;
+        letter-spacing: 0.6px;
+
+        &:first-child {
+          max-width: 416px;
+        }
 
         &:last-child {
           margin-bottom: 0;

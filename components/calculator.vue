@@ -124,7 +124,7 @@ export default {
   &__card {
     display: flex;
     width: 100%;
-    padding: 53px 82px 55px;
+    padding: 53px 82px 78px;
     border-radius: $border-radius-card-lg;
     box-shadow: 5.1px 6.1px 16.8px 4.2px rgba(21, 19, 29, 0.43);
     background: linear-gradient(

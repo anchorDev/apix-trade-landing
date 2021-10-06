@@ -41,7 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 .advantages {
-  margin: 0 auto 143px;
+  margin: 0 auto 172px;
   &__title {
     margin: 0 0 18px;
   }

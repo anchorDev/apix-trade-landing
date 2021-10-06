@@ -24,7 +24,7 @@
             </li>
           </ul>
         </div>
-        <div class="cabinet__col">
+        <div v-in-viewport.once class="cabinet__col fade-in">
           <picture>
             <source
               srcset="
@@ -33,8 +33,7 @@
               "
             />
             <img
-              v-in-viewport.once
-              class="cabinet__img fade-in"
+              class="cabinet__img"
               src="~assets/img/service-screen.png"
               alt="apix.trade"
             />

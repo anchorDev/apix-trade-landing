@@ -43,18 +43,44 @@ export default {
 <style lang="scss" scoped>
 [data-vue-component-name='Step'] {
   position: relative;
-  padding: 73px 38px 34px;
+  padding: 57px 30px 34px;
   border-radius: 32px;
   box-shadow: 5.1px 6.1px 16.8px 4.2px rgba(21, 19, 29, 0.43);
-  background: linear-gradient(
-    90deg,
-    rgba(78, 145, 255, 0.1) 0%,
-    rgba(78, 145, 255, 0) 50%,
-    rgba(78, 145, 255, 0.1) 100%
-  );
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  &:after {
+    overflow: hidden;
+    position: absolute;
+    border-radius: 32px;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(
+      circle at -30%,
+      rgba(78, 145, 255, 0.1) 20%,
+      rgba(78, 145, 255, 0) 70%
+    );
+  }
+
+  &:before {
+    overflow: hidden;
+    position: absolute;
+    border-radius: 32px;
+    content: '';
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(
+      circle at 130%,
+      rgba(78, 145, 255, 0.1) 20%,
+      rgba(78, 145, 255, 0) 70%
+    );
+  }
 
   .step-number {
     position: absolute;
@@ -82,19 +108,25 @@ export default {
     }
   }
 
+  div,
+  picture {
+    z-index: 2;
+    position: relative;
+  }
+
   h1 {
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     color: #99a7b8;
-    margin-bottom: 13px;
+    margin-bottom: 9px;
     letter-spacing: 1.44px;
   }
 
   p {
     text-align: center;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.6;

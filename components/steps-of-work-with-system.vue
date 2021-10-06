@@ -84,7 +84,7 @@ export default {
 
 <style lang="scss" scoped>
 .steps-of-work-with-system {
-  margin: 0 auto 136px;
+  margin: 0 auto 158px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,6 +112,7 @@ export default {
   .step-list {
     display: flex;
     justify-content: space-between;
+    margin: 0 -8px;
 
     @include bp(1200px) {
       justify-content: center;
@@ -119,11 +120,9 @@ export default {
     }
 
     .step {
-      margin-right: 16px;
-
+      margin: 0 8px;
       @include bp(1200px) {
         flex: 0 0 40%;
-        margin-right: 24px;
         margin-bottom: 60px;
       }
 
