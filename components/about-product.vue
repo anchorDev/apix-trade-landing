@@ -153,7 +153,7 @@ export default {
         color: #6e7594;
         margin-bottom: 39px;
         font-size: 15px;
-        font-weight: 550;
+        font-weight: 600;
 
         &:last-child {
           margin-bottom: 0;
