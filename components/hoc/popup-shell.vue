@@ -16,7 +16,7 @@ export default {
     Close,
   },
   methods: {
-    ...mapMutations('popup', ['setPopup']),
+    ...mapMutations(['setPopup']),
     onClose() {
       this.setPopup(null)
     },

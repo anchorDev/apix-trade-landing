@@ -43,22 +43,8 @@ body {
   overflow-x: hidden;
   padding: 67px 0 0;
   position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url('~assets/img/bg.jpg') 50% 0 no-repeat;
-    z-index: -1;
-
-    @include bp(768px) {
-      background: url('~assets/img/bg.jpg') 50% 0 no-repeat;
-      background-size: auto 7200px;
-    }
-  }
+  background: #222328 url('~assets/img/bg.jpg') 50% 0 no-repeat;
+  background-size: auto 100%;
 
   .overlay {
     position: absolute;

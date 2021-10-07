@@ -101,7 +101,6 @@ export default {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    font-weight: 600;
   }
 
   &__wrap {

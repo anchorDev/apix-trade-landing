@@ -18,14 +18,14 @@ export default {
         content: 'Копи-трейд платформа для трейдеров APIX',
       },
       { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: 'v-in-viewport.once/photo.png' },
+      { property: 'og:image', content: '/apix-trade-landing/photo.png' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: 'v-in-viewport.once/favicon.ico',
+        href: '/apix-trade-landing/favicon.ico',
       },
     ],
   },

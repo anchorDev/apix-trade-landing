@@ -34,18 +34,18 @@
           для защищенного сотрудничества
         </h2>
 
-        <p>
+        <p class="medium">
           Мы видим нашу платформу, как то место, где инвестор смог бы с полной
           уверенностью вложить свои деньги, доверив их профессиональным
-          трейдерам, <span>безопасно умножая свой капитал</span>, в то время как
+          трейдерам, <b>безопасно умножая свой капитал</b>, в то время как
           трейдер получает возможность управления множеством аккаунтов
           инвесторов единовременно, извлекая максимум прибыли от своей торговли.
         </p>
 
-        <p>
-          <span>Уникальные возможности</span> нашей платформы позволят открыть
-          мир безопасных инвестиционных возможностей как для профессионалов, так
-          и для начинающих.
+        <p class="medium">
+          <b>Уникальные возможности</b> нашей платформы позволят открыть мир
+          безопасных инвестиционных возможностей как для профессионалов, так и
+          для начинающих.
         </p>
       </div>
     </div>
@@ -101,7 +101,6 @@ export default {
       background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
-      font-weight: 600;
     }
   }
 
@@ -130,7 +129,7 @@ export default {
     }
 
     .information {
-      flex: 0 0 482px;
+      flex: 0 0 437px;
       color: #99a7b8;
       display: flex;
       flex-direction: column;
@@ -138,7 +137,7 @@ export default {
       padding-top: 65px;
 
       @include bp(1200px) {
-        max-width: 450px;
+        max-width: 400px;
         margin: 0 40px;
       }
 
@@ -154,10 +153,6 @@ export default {
       p {
         color: #6e7594;
         margin-bottom: 28px;
-        font-size: 15px;
-        font-weight: 100;
-        line-height: 1.6;
-        letter-spacing: 0.6px;
 
         &:first-child {
           max-width: 416px;
@@ -167,7 +162,8 @@ export default {
           margin-bottom: 0;
         }
 
-        span {
+        b {
+          font-weight: 600;
           color: #99a7b8;
         }
       }

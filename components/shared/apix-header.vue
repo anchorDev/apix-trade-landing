@@ -126,7 +126,7 @@ export default {
     this.onScroll()
   },
   methods: {
-    ...mapMutations('popup', ['setPopup']),
+    ...mapMutations(['setPopup']),
     throttle(func, timeFrame) {
       let lastTime = 0
       return function (...args) {

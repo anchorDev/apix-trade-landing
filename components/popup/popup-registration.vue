@@ -132,8 +132,8 @@ export default {
     this.setDefaultForm()
   },
   methods: {
-    ...mapMutations('popup', ['setPopup']),
-    ...mapActions('popup', ['fetchRegistration']),
+    ...mapMutations(['setPopup']),
+    ...mapActions(['fetchRegistration']),
     onClose() {
       this.setPopup(null)
     },

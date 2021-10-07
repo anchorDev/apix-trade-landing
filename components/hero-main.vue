@@ -85,7 +85,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('popup', ['setPopup']),
+    ...mapMutations(['setPopup']),
     onRegister() {
       this.setPopup('PopupRegistration')
     },

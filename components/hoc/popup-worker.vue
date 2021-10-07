@@ -20,8 +20,8 @@ export default {
     PopupRegistration,
   },
   computed: {
-    ...mapState('popup', ['popup']),
-    ...mapGetters('popup', ['hasOpenPopup']),
+    ...mapState(['popup']),
+    ...mapGetters(['hasOpenPopup']),
   },
 }
 </script>
