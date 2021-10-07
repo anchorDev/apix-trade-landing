@@ -1,10 +1,6 @@
 <template>
   <div>
     <popup-worker />
-    <div class="overlay overlay-1"></div>
-    <div class="overlay overlay-2"></div>
-    <div class="overlay overlay-3"></div>
-    <div class="overlay overlay-4"></div>
     <apix-header />
     <Nuxt />
     <apix-footer />
@@ -45,59 +41,10 @@ body {
   position: relative;
   background: #222328 url('~assets/img/bg.jpg') 50% 0 no-repeat;
   background-size: auto 100%;
+  zoom: 0.9;
 
-  .overlay {
-    position: absolute;
-  }
-
-  .overlay {
-    &-1 {
-      left: -10%;
-      top: 10%;
-      width: 30%;
-      height: 45%;
-      background: radial-gradient(
-        ellipse at -25% 50%,
-        rgba(128, 70, 174, 0.8) 0%,
-        rgba(46, 114, 242, 0) 50%
-      );
-    }
-
-    &-2 {
-      left: -10%;
-      top: 50%;
-      width: 30%;
-      height: 45%;
-      background: radial-gradient(
-        ellipse at -25% 50%,
-        rgba(128, 70, 174, 0.5) 0%,
-        rgba(46, 114, 242, 0) 50%
-      );
-    }
-
-    &-3 {
-      right: -10%;
-      top: 10%;
-      width: 30%;
-      height: 45%;
-      background: radial-gradient(
-        ellipse at 125% 50%,
-        rgba(128, 70, 174, 0.8) 0%,
-        rgba(46, 114, 242, 0) 50%
-      );
-    }
-
-    &-4 {
-      right: -10%;
-      top: 50%;
-      width: 30%;
-      height: 45%;
-      background: radial-gradient(
-        ellipse at 125% 50%,
-        rgba(128, 70, 174, 0.5) 0%,
-        rgba(46, 114, 242, 0) 50%
-      );
-    }
+  @include bp($lg) {
+    zoom: 1;
   }
 }
 

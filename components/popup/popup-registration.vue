@@ -68,8 +68,6 @@ import BaseCheckbox from '@/components/UI/BaseCheckbox'
 import BaseButton from '@/components/UI/BaseButton'
 import { mapMutations, mapActions } from 'vuex'
 
-import isEmail from 'is-email'
-
 const defaultForm = {
   email: '',
   telegramChannel: '',
@@ -95,7 +93,7 @@ export default {
   },
   computed: {
     isValidForm() {
-      if (this._.isEmpty(this.form)) return false
+      if (this.isEmpty(this.form)) return false
 
       const {
         email,
@@ -104,15 +102,24 @@ export default {
         agreeWithTheTermsOfUse,
       } = this.form
 
-      const tgRegex = /\s/g
+      const tgRegex = /^[#@]?[A-Za-z0-9_]*$/gi
 
-      return !!(
+      const isTelegramChannelValidation =
+        telegramChannel.match(tgRegex) && telegramChannel.match(tgRegex)[0]
+          ? !!telegramChannel.match(tgRegex)[0].length
+          : false
+      const isPersonalTelegramValidation =
+        personalTelegram.match(tgRegex) && personalTelegram.match(tgRegex)[0]
+          ? !!personalTelegram.match(tgRegex)[0].length
+          : false
+
+      return (
         email.length &&
-        isEmail(email) &&
+        this.isEmail(email) &&
         telegramChannel.length &&
-        !tgRegex.test(telegramChannel) &&
+        isTelegramChannelValidation &&
         personalTelegram.length &&
-        !tgRegex.test(personalTelegram) &&
+        isPersonalTelegramValidation &&
         agreeWithTheTermsOfUse &&
         !this.isLoading
       )
@@ -165,7 +172,20 @@ export default {
       }
     },
     setDefaultForm() {
-      this.form = this._.cloneDeep(defaultForm)
+      this.form = { ...defaultForm }
+    },
+    isEmpty(obj) {
+      for (const prop in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, prop)) {
+          return false
+        }
+      }
+
+      return JSON.stringify(obj) === JSON.stringify({})
+    },
+    isEmail(email) {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      return re.test(String(email).toLowerCase())
     },
   },
 }

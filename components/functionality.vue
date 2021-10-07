@@ -124,8 +124,8 @@ export default {
     &:last-child {
       text-align: left;
       padding: 20px 0 0;
-      flex: 1 0 437px;
-      max-width: 437px;
+      flex: 1 0 440px;
+      max-width: 440px;
       width: 100%;
     }
   }
@@ -139,6 +139,10 @@ export default {
 
     &:nth-child(2) {
       display: none;
+    }
+
+    @include bp(1200px) {
+      margin: -100px 0 0;
     }
 
     @include bp(640px) {

@@ -4,18 +4,22 @@
       <p class="big">
         <b>{{ $t('index.request.text') }}</b>
       </p>
-      <button class="btn btn--header">{{ $t('index.request.btn') }}</button>
+      <button class="btn btn--header" @click="openReg">
+        {{ $t('index.request.btn') }}
+      </button>
     </blockquote>
   </section>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'RequestDemo',
-  components: {},
-  props: {},
-  data() {
-    return {}
+  methods: {
+    ...mapMutations(['setPopup']),
+    openReg() {
+      this.setPopup('PopupRegistration')
+    },
   },
 }
 </script>

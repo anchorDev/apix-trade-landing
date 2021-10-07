@@ -10,7 +10,7 @@ export default {
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=0.9' },
       { hid: 'description', name: 'description', content: '' },
       { property: 'og:url', content: 'http://apix.trade' },
       {
@@ -46,7 +46,6 @@ export default {
   plugins: [
     { src: '@/plugins/vue-scroll-reveal', ssr: false },
     { src: '@/plugins/v-click-outside', ssr: false },
-    '~/plugins/lodash.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

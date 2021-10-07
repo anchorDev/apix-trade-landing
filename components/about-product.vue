@@ -125,11 +125,15 @@ export default {
       img {
         max-width: 100%;
         margin: 0 0 0 32px;
+
+        @include bp(1200px) {
+          margin: 0;
+        }
       }
     }
 
     .information {
-      flex: 0 0 437px;
+      flex: 0 0 440px;
       color: #99a7b8;
       display: flex;
       flex-direction: column;

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Advantages4 from '@/assets/svg/advantages1.svg?inline'
+import Advantages4 from 'assets/svg/hero3.svg?inline'
 import Advantages2 from '@/assets/svg/advantages2.svg?inline'
 import Advantages3 from '@/assets/svg/advantages3.svg?inline'
 import Advantages1 from '@/assets/svg/advantages4.svg?inline'

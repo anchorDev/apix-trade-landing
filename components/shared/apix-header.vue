@@ -201,10 +201,11 @@ export default {
 
     &-link {
       cursor: pointer;
-      padding: 6px;
+      padding: 8px;
       margin: 0 6px;
       line-height: 1.73;
       position: relative;
+      font-weight: 600;
 
       @include bp(1200px) {
         font-size: 13px;
