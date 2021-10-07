@@ -40,7 +40,6 @@ body {
   padding: 67px 0 0;
   position: relative;
   background: #222328 url('~assets/img/bg.jpg') 50% 0 no-repeat;
-  background-size: auto 100%;
   zoom: 0.9;
 
   @include bp($lg) {

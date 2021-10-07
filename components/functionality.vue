@@ -75,6 +75,7 @@ export default {
 
 <style lang="scss" scoped>
 .functionality {
+  padding: 0 0 70px;
   text-align: center;
 
   h2 {
@@ -119,6 +120,8 @@ export default {
   &__col {
     &:first-child {
       margin: 0 0 -14px -14%;
+      mix-blend-mode: screen;
+      filter: contrast(1.2);
     }
 
     &:last-child {
@@ -134,7 +137,6 @@ export default {
     position: relative;
     z-index: 1;
     max-width: 100%;
-    mix-blend-mode: screen;
     margin: -100px 0 0 36px;
 
     &:nth-child(2) {

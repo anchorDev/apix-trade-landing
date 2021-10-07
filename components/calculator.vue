@@ -135,6 +135,39 @@ export default {
       #392751 100%
     );
     justify-content: space-between;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        rgba(51, 53, 102, 0) 0%,
+        #333566 50%,
+        rgba(51, 53, 102, 0) 100%
+      );
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        rgba(51, 53, 102, 0) 0%,
+        #333566 50%,
+        rgba(51, 53, 102, 0) 100%
+      );
+    }
 
     @include bp($lg) {
       padding: 53px 30px;
@@ -145,10 +178,10 @@ export default {
   }
 
   &__col {
-    flex: 0 0 270px;
+    flex: 0 0 280px;
 
     &:first-child {
-      margin: 0 45px 0 0;
+      margin: 0 35px 0 0;
 
       p {
         padding: 0 0 0 5px;

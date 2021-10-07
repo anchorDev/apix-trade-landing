@@ -49,7 +49,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #202433;
+  background: #242834;
 
   &:after {
     overflow: hidden;
