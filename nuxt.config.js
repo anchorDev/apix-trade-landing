@@ -63,7 +63,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/svg',
     '@nuxtjs/style-resources',
-    'nuxt-imagemin',
     [
       'nuxt-font-loader-strategy',
       {
