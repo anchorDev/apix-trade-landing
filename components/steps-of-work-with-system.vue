@@ -130,6 +130,12 @@ export default {
         flex: 0 0 90%;
       }
 
+      &:first-child {
+        svg {
+          transform: translateX(5px);
+        }
+      }
+
       &:last-child {
         margin-right: 0;
       }

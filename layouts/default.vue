@@ -39,7 +39,7 @@ body {
   overflow-x: hidden;
   padding: 67px 0 0;
   position: relative;
-  background: #222328 url('~assets/img/bg.jpg') 50% 0 no-repeat;
+  background: #222328;
   background-size: 100% auto;
   zoom: 0.9;
 
@@ -48,8 +48,7 @@ body {
   }
 
   @include retina {
-    background: #222328 url('~assets/img/bg2@x.jpg') 50% 0 no-repeat;
-    background-size: 100% auto;
+    background: #222328;
   }
 }
 

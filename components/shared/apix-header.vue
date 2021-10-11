@@ -20,11 +20,13 @@
             v-for="(item, i) in $t('index.header.navigation')"
             :key="i"
             class="header__nav-item"
-            @click="scrollToSection(idArr[i])"
+            @click="scrollToPos(idArr[i])"
           >
             <p
               class="header__nav-link"
-              :class="{ 'header__nav-link--active': i === 0 }"
+              :class="{
+                'header__nav-link--active': idArr[i] === activeSection,
+              }"
             >
               {{ item }}
             </p>
@@ -113,6 +115,7 @@ export default {
         '#faq',
       ],
       isBurgerOpen: false,
+      activeSection: '#main',
     }
   },
   mounted() {
@@ -124,6 +127,27 @@ export default {
       false
     )
     this.onScroll()
+
+    const options = {
+      rootMargin: '-200px 0px -200px 0px',
+      threshold: [0, 0.1, 0.25, 0.4, 0.5, 0.6, 0.75, 0.8, 0.9, 1],
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const elem = entry.target
+
+          if (entry.intersectionRatio >= 0.1) {
+            this.activeSection = `#${elem.id}`
+          }
+        }
+      })
+    }, options)
+
+    this.idArr.forEach((item) => {
+      observer.observe(document.querySelector(item))
+    })
   },
   methods: {
     ...mapMutations(['setPopup']),
@@ -141,14 +165,10 @@ export default {
       const scrolled = window.pageYOffset || document.documentElement.scrollTop
       this.isScrolled = scrolled > 5
     },
-    scrollToSection(id) {
-      const yOffset = -87
-      const element = document.querySelector(id)
-      const y =
-        element.getBoundingClientRect().top + window.pageYOffset + yOffset
-
-      window.scrollTo({ top: y, behavior: 'smooth' })
-      this.isBurgerOpen = false
+    scrollToPos(id) {
+      document.querySelector(id).scrollIntoView({
+        behavior: 'smooth',
+      })
     },
     toggleBurger() {
       this.isBurgerOpen = !this.isBurgerOpen

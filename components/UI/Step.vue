@@ -92,6 +92,8 @@ export default {
     height: 76px;
     box-shadow: inset 0 0 5.2px 1.8px rgba(25, 133, 195, 0.74);
     background-color: #262b38;
+    background-size: 99% 99%;
+    background-position: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
