@@ -36,6 +36,23 @@ export default {
     rgba(37, 40, 52, 1) 100%
   );
   box-shadow: 5.1px 6.1px 16.8px 4.2px rgba(21, 19, 29, 0.43);
+  max-height: 100%;
+  width: 100%;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #99a7b8;
+    outline: none;
+    border-radius: 100px;
+  }
 
   .close {
     position: absolute;
@@ -45,6 +62,10 @@ export default {
     height: 28px;
     fill: #99a7b8;
     cursor: pointer;
+  }
+
+  @include bp(700px) {
+    padding: 40px;
   }
 }
 </style>

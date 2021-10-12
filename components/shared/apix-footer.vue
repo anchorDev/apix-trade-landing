@@ -187,7 +187,7 @@ export default {
     }
   }
 
-  @include bp(860px) {
+  @include bp(1300px) {
     &-container {
       position: unset;
 
@@ -202,7 +202,7 @@ export default {
     }
   }
 
-  @include bp(500px) {
+  @include bp(690px) {
     &-container {
       &__nav {
         &-list {

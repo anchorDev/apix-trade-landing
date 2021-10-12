@@ -6,7 +6,11 @@
       {{ $t('index.start.description') }}
     </p>
 
-    <button v-in-viewport.once class="btn btn--gradient fade-in">
+    <a
+      v-in-viewport.once
+      href="https://t.me/apixtrade"
+      class="btn btn--gradient fade-in"
+    >
       <picture>
         <source
           srcset="~assets/img/logo_btn.png, ~assets/img/logo_btn@2x.png 2x"
@@ -18,7 +22,7 @@
         />
       </picture>
       <p>{{ $t('index.start.btn') }}</p>
-    </button>
+    </a>
   </section>
 </template>
 

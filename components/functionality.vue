@@ -102,7 +102,7 @@ export default {
 
   .wrapper > p {
     margin: 0 auto 85px auto;
-    max-width: 840px;
+    max-width: 940px;
     white-space: pre-line;
     background-image: linear-gradient(to right, #6dcaff, #c663ff),
       linear-gradient(to left, #bfbccd, #bfbccd);
@@ -111,6 +111,10 @@ export default {
     -webkit-text-fill-color: transparent;
     color: transparent;
     line-height: 1.7;
+
+    @include bp(800px) {
+      white-space: unset;
+    }
   }
 
   &__wrap {
@@ -120,7 +124,7 @@ export default {
   &__col {
     &:first-child {
       margin: 0 0 -14px -14%;
-      mix-blend-mode: screen;
+      mix-blend-mode: lighten;
       filter: contrast(1.2);
     }
 
@@ -206,6 +210,10 @@ export default {
     &__col {
       &:first-child {
         margin: -10% 0;
+
+        @include bp($md) {
+          margin: 0;
+        }
       }
 
       &:last-child {

@@ -119,6 +119,10 @@ export default {
       margin: -5.5% 0 0 0;
       width: 52.5%;
 
+      @include bp($md) {
+        width: 98%;
+      }
+
       &:after {
         content: '';
         position: absolute;

@@ -34,6 +34,7 @@ export default {
   right: 0;
   bottom: 0;
   z-index: 500;
+  padding: 0 15px;
 
   &.blur-background {
     backdrop-filter: blur(3px);
@@ -47,6 +48,7 @@ export default {
     transform: translate(-50%, -50%);
     max-height: 80%;
     z-index: 501;
+    height: 100%;
   }
 }
 </style>

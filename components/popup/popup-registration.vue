@@ -194,7 +194,8 @@ export default {
 <style lang="scss" scoped>
 [data-vue-component-name='PopupRegistration'] {
   color: #fff;
-  width: 631px;
+  max-width: 631px;
+  width: calc(100% - 30px);
 
   h4 {
     font-size: 24px;

@@ -98,6 +98,7 @@ export default {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    text-align: center;
 
     span {
       white-space: pre-line;
@@ -108,6 +109,10 @@ export default {
       -webkit-text-fill-color: transparent;
       color: transparent;
       font-size: 31.5px;
+      background-size: 99% 99%;
+      background-position: 50%;
+      display: inline-block;
+      width: 18px;
     }
   }
 
