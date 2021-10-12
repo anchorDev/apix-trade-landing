@@ -3,7 +3,7 @@
     class="iframe"
     width="100%"
     height="100%"
-    src="/demo/APIX.trade.html"
+    src="/static/demo_s/APIX.trade.html"
   />
 </template>
 
