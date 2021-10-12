@@ -24,7 +24,7 @@
             </li>
           </ul>
         </div>
-        <div v-in-viewport.once class="cabinet__col fade-in">
+        <nuxt-link to="/demo" v-in-viewport.once class="cabinet__col fade-in">
           <picture>
             <source
               srcset="
@@ -38,7 +38,7 @@
               alt="apix.trade"
             />
           </picture>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </section>
