@@ -47,6 +47,11 @@ body {
     zoom: 1;
   }
 
+  &.iframe {
+    zoom: 1;
+    padding: 0;
+  }
+
   @include retina {
     background: #222328;
   }
