@@ -18,14 +18,14 @@ export default {
         content: 'Копи-трейд платформа для трейдеров APIX',
       },
       { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: '/apix-trade-landing/photo.png' },
+      { property: 'og:image', content: '/photo.png' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/apix-trade-landing/favicon.ico',
+        href: '/favicon.ico',
       },
     ],
   },
@@ -141,14 +141,6 @@ export default {
 
   server: {
     host: '0', // default: localhost
-  },
-
-  generate: {
-    dir: 'docs',
-  },
-
-  router: {
-    base: '/apix-trade-landing',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

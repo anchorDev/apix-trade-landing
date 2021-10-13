@@ -3,13 +3,13 @@
     class="iframe"
     width="100%"
     height="100%"
-    src="/demo_s/APIX.trade2.html"
+    src="/demo_s/APIX.trade4.html"
   />
 </template>
 
 <script>
 export default {
-  name: 'Demo',
+  name: 'DemoSettings',
   layout: 'empty',
   head() {
     return {
@@ -27,11 +27,11 @@ export default {
         case 'redirect':
           window.location = window.location.origin
           break
-        case 'pays':
-          this.$router.push('demo-pays')
+        case 'home':
+          this.$router.push('demo')
           break
-        case 'settings':
-          this.$router.push('demo-settings')
+        case 'demo-pays':
+          this.$router.push('demo-pays')
           break
       }
     },
