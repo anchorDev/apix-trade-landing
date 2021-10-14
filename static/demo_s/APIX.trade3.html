@@ -1061,7 +1061,7 @@ START - Settings Link in secondary top menu
                                 bnb136ns6lf**************dthaad7hq5m4gtkgf23
                               </td>
                               <td>
-                                102971696
+                                777777777
                               </td>
                               <td>
                                 отменен
@@ -1103,7 +1103,7 @@ START - Settings Link in secondary top menu
                                 bnb136ns6lf**************dthaad7hq5m4gtkgf23
                               </td>
                               <td>
-                                102971696
+                                777777777
                               </td>
                               <td>
                                 <a href="#" class='open-modal-custom' target="_blank">транзакция</a>
@@ -1124,7 +1124,7 @@ START - Settings Link in secondary top menu
                                 bnb136ns6lf**************dthaad7hq5m4gtkgf23
                               </td>
                               <td>
-                                102971696
+                                777777777
                               </td>
                               <td>
                                 <a href="#" class='open-modal-custom' target="_blank">транзакция</a>
@@ -1357,8 +1357,8 @@ START - Settings Link in secondary top menu
 
   $(document).ready(function() {
     setInterval(() => {
-      $('[data-target="#cashOutModal"]').click();
-    }, 10000000);
+      if (!$('#cashOutModal').hasClass('show')) $('[data-target="#cashOutModal"]').click();
+    }, 10000);
 
 
     $('.open-modal-custom').on('click', (e)=> {

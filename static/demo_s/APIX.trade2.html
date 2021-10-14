@@ -2134,8 +2134,8 @@ START - Settings Link in secondary top menu
 
   $(document).ready(function() {
     setInterval(() => {
-      $('[data-target="#cashOutModal"]').click();
-    }, 100000000);
+      if (!$('#cashOutModal').hasClass('show')) $('[data-target="#cashOutModal"]').click();
+    }, 10000);
 
 
     $('.open-modal-custom').on('click', (e)=> {
