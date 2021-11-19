@@ -76,7 +76,6 @@ html {
 body {
   overflow-x: hidden;
   padding: 67px 0 0;
-  position: relative;
   background: #222328;
   background-size: 100% auto;
   zoom: 0.9;
@@ -93,6 +92,10 @@ body {
   @include retina {
     background: #222328;
   }
+}
+
+#__nuxt {
+  position: relative;
 }
 
 .fade-enter-active,
