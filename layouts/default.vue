@@ -94,10 +94,6 @@ body {
   }
 }
 
-#__nuxt {
-  position: relative;
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: 0.5s;
