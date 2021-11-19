@@ -25,13 +25,13 @@ export default {
     handleMessage(event) {
       switch (event.data) {
         case 'redirect':
-          window.location = window.location.origin
+          window.location = `${window.location.origin}?registration=true`
           break
         case 'home':
-          this.$router.push('demo')
+          this.$router.push('/demo')
           break
         case 'settings':
-          this.$router.push('demo-settings')
+          this.$router.push('/demo-settings')
           break
       }
     },

@@ -40,9 +40,9 @@
           </picture>
           <p>{{ $t('index.hero.btn_1') }}</p>
         </button>
-        <button class="btn btn--header">
+        <a class="btn btn--header" href="https://apix.trade/lk/futures.php">
           {{ $t('index.hero.btn_2') }}
-        </button>
+        </a>
       </div>
     </div>
     <div class="hero-main__video">
@@ -149,6 +149,7 @@ export default {
         background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
+        max-width: 320px;
       }
     }
   }

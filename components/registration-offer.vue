@@ -4,7 +4,7 @@
       <p class="big">
         <b>{{ $t('index.registrationOffer.text') }}</b>
       </p>
-      <button class="btn btn--header">
+      <button class="btn btn--header" @click="open">
         {{ $t('index.registrationOffer.btn') }}
       </button>
     </blockquote>
@@ -12,12 +12,20 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
   name: 'RequestDemo',
   components: {},
   props: {},
   data() {
     return {}
+  },
+  methods: {
+    ...mapMutations(['setPopup']),
+    open() {
+      this.setPopup('PopupRegistration')
+    },
   },
 }
 </script>

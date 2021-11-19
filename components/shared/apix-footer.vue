@@ -18,27 +18,22 @@
         <nav class="footer-container__nav">
           <ul class="footer-container__nav-list">
             <li
-              v-for="(item, i) in $t('index.header.navigation')"
+              v-for="(item, i) in $t('index.footer.links')"
               :key="i"
               class="footer-container__nav-item"
-              @click="scrollToSection(idArr[i])"
             >
-              <p
-                class="footer-container__nav-link"
-                :class="{ 'header__nav-link--active': i === 0 }"
+              <a
+                :href="item.link"
+                target="_blank"
+                class="footer-container__nav-link p"
               >
-                {{ item }}
-              </p>
+                {{ item.name }}
+              </a>
             </li>
           </ul>
         </nav>
 
         <div class="footer-container__actions">
-          <div class="footer-container__lang">
-            <p>{{ $i18n.locale }}</p>
-            <arrow class="arrow" />
-          </div>
-
           <a
             class="header__btn btn btn--header"
             href="https://apix.trade/lk/auth.php"
@@ -46,7 +41,7 @@
             {{ $t('index.header.singInBtn') }}
           </a>
 
-          <button class="header__btn btn btn--gradient">
+          <button class="header__btn btn btn--gradient" @click="onRegister">
             <p>
               {{ $t('index.header.singUpBtn') }}
             </p>
@@ -58,34 +53,14 @@
 </template>
 
 <script>
-import Arrow from '@/assets/svg/arrow.svg?inline'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'ApixFooter',
-  components: {
-    Arrow,
-  },
-  data() {
-    return {
-      idArr: [
-        '#main',
-        '#functionality',
-        '#cabinet',
-        '#calculator',
-        '#about-product',
-        '#faq',
-      ],
-    }
-  },
   methods: {
-    scrollToSection(id) {
-      const yOffset = -87
-      const element = document.querySelector(id)
-      const y =
-        element.getBoundingClientRect().top + window.pageYOffset + yOffset
-
-      window.scrollTo({ top: y, behavior: 'smooth' })
-      this.isBurgerOpen = false
+    ...mapMutations(['setPopup']),
+    onRegister() {
+      this.setPopup('PopupRegistration')
     },
   },
 }
@@ -122,6 +97,8 @@ export default {
         margin: 0 6px;
         line-height: 1.73;
         position: relative;
+        text-decoration: none;
+        color: $white;
 
         &:after {
           content: '';

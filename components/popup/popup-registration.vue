@@ -1,7 +1,7 @@
 <template>
   <div v-click-outside="onClose" data-vue-component-name="PopupRegistration">
     <popup-shell>
-      <h4>Регистрация</h4>
+      <h4>{{ $t('index.popup.title') }}</h4>
 
       <form action="#" @submit="onSubmit">
         <p
@@ -12,7 +12,7 @@
         <div>
           <base-input
             v-model="form.email"
-            label="Ваш E-mail"
+            :label="$t('index.popup.labelOne')"
             :is-require="true"
           />
         </div>
@@ -20,7 +20,7 @@
         <div>
           <base-input
             v-model="form.telegramChannel"
-            label="Ваш Telegram канал"
+            :label="$t('index.popup.labelTwo')"
             :is-require="true"
           />
         </div>
@@ -28,7 +28,7 @@
         <div>
           <base-input
             v-model="form.personalTelegram"
-            label="Ваш Telegram для связи"
+            :label="$t('index.popup.labelThree')"
             :is-require="true"
           />
         </div>
@@ -37,7 +37,7 @@
           <base-checkbox
             v-model="form.agreeWithTheTermsOfUse"
             class="agreeWithTheTermsOfUse"
-            label="Ознакомился и согласен с условиями пользования и политикой конфиденциальности"
+            :label="$t('index.popup.checkbox')"
             :is-require="true"
           />
         </div>
@@ -48,13 +48,13 @@
             :is-disabled="!isValidForm"
             @click="onSubmit"
           >
-            Отправить
+            {{ $t('index.popup.send') }}
           </base-button>
         </div>
 
         <div class="require-description">
           <span class="require-char">*</span>
-          - обязательные поля для заполнения
+          {{ $t('index.popup.required') }}
         </div>
       </form>
     </popup-shell>
@@ -150,8 +150,16 @@ export default {
         type: 'loading',
         text: 'Отправка запроса',
       }
+      // todo: нуно api key добавить .env
+      const telegramURL =
+        'https://api.telegram.org/bot2055967352:AAHB3ziCQoHalL6CZZeaBac0IOSBt0AN6sY/sendMessage'
+      const telegramData = `Время: ${this.formatDate()}\nE-mail: ${
+        this.form.email
+      }\nTelegram канал: ${this.form.telegramChannel}\nTelegram для связи: ${
+        this.form.personalTelegram
+      }`
 
-      this.fetchRegistration(this.form)
+      this.fetchRegistration({ telegramURL, telegramData })
         .then(this.onSuccessRegistration)
         .catch(this.onErrorRegistration)
         .then(() => (this.isLoading = false))
@@ -186,6 +194,17 @@ export default {
     isEmail(email) {
       const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       return re.test(String(email).toLowerCase())
+    },
+    formatDate() {
+      const d = new Date()
+      let month = '' + (d.getMonth() + 1)
+      let day = '' + d.getDate()
+      const year = d.getFullYear()
+
+      if (month.length < 2) month = '0' + month
+      if (day.length < 2) day = '0' + day
+
+      return [year, month, day].join('-')
     },
   },
 }

@@ -24,7 +24,15 @@
             </li>
           </ul>
         </div>
-        <nuxt-link to="/demo" v-in-viewport.once class="cabinet__col fade-in">
+        <nuxt-link
+          v-in-viewport.once
+          to="/demo"
+          target="_blank"
+          class="cabinet__col fade-in"
+        >
+          <div class="cabinet__btn-text">
+            <p>{{ $t('index.cabinet.link-text') }}</p>
+          </div>
           <picture>
             <source
               srcset="
@@ -109,15 +117,45 @@ export default {
     justify-content: space-between;
   }
 
+  &__btn-text {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include size(calc(100% + 4px));
+    z-index: 20;
+    border-radius: 11px;
+    overflow: hidden;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    p {
+      font-size: 30px;
+      color: $white;
+      font-weight: 600;
+    }
+  }
+
   &__col {
     &:first-child {
       flex: 1 0 550px;
+      position: relative;
     }
 
     &:last-child {
       position: relative;
       margin: -5.5% 0 0 0;
       width: 52.5%;
+
+      &:hover {
+        .cabinet__btn-text {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
 
       @include bp($md) {
         width: 98%;

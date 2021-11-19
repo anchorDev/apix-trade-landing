@@ -5,7 +5,7 @@
   >
     <h2
       v-in-viewport.once
-      class="fade-in"
+      class="fade-steps-of-work-with-systemin"
       v-html="$t('index.stepsOfWorkWithSystem.title')"
     />
 
@@ -112,7 +112,6 @@ export default {
   .step-list {
     display: flex;
     justify-content: space-between;
-    margin: 0 -8px;
 
     @include bp(1200px) {
       justify-content: center;
@@ -120,7 +119,6 @@ export default {
     }
 
     .step {
-      margin: 0 8px;
       @include bp(1200px) {
         flex: 0 0 40%;
         margin-bottom: 60px;

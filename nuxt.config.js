@@ -4,19 +4,11 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Копи-трейд платформа для трейдеров APIX',
-    htmlAttrs: {
-      lang: 'ru',
-    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=0.9' },
       { hid: 'description', name: 'description', content: '' },
       { property: 'og:url', content: 'http://apix.trade' },
-      {
-        property: 'og:title',
-        content: 'Копи-трейд платформа для трейдеров APIX',
-      },
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: '/photo.png' },
       { name: 'format-detection', content: 'telephone=no' },
@@ -26,6 +18,18 @@ export default {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico',
+      },
+    ],
+    script: [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-6BLTKSQR38',
+        async: true,
+      },
+      {
+        src: '/gtag.js',
+      },
+      {
+        src: '/yandex.js',
       },
     ],
   },
@@ -115,12 +119,27 @@ export default {
           {
             code: 'ru',
             file: 'ru.js',
+            name: 'рус',
+          },
+          {
+            code: 'en',
+            file: 'en.js',
+            name: 'eng',
+          },
+          {
+            code: 'zh',
+            file: 'zh.js',
+            name: '简体',
           },
         ],
-        lazy: true,
         langDir: 'lang/',
         defaultLocale: 'ru',
-        detectBrowserLanguage: false,
+        detectBrowserLanguage: {
+          alwaysRedirect: true,
+          fallbackLocale: 'ru',
+          onlyOnRoot: true,
+          useCookie: true,
+        },
       },
     ],
     [

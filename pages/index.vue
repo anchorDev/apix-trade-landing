@@ -16,7 +16,17 @@
 </template>
 
 <script>
-export default {}
+import { mapMutations } from 'vuex'
+export default {
+  mounted() {
+    if (this.$route.query.registration) {
+      this.setPopup('PopupRegistration')
+    }
+  },
+  methods: {
+    ...mapMutations(['setPopup']),
+  },
+}
 </script>
 
 <style lang="scss"></style>

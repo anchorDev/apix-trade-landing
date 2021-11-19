@@ -1,5 +1,5 @@
 <template>
-  <div data-vue-component-name="Step">
+  <li data-vue-component-name="Step">
     <div v-if="stepNumber" class="step-number">
       <span>{{ stepNumber }}</span>
     </div>
@@ -17,7 +17,7 @@
     <picture>
       <slot name="image" class="image" />
     </picture>
-  </div>
+  </li>
 </template>
 
 <script>
@@ -44,6 +44,7 @@ export default {
 [data-vue-component-name='Step'] {
   position: relative;
   padding: 57px 30px 34px;
+  width: calc(33.333% - 16px);
   border-radius: 32px;
   box-shadow: 5.1px 6.1px 16.8px 4.2px rgba(21, 19, 29, 0.43);
   display: flex;

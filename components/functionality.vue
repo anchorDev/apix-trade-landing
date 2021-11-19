@@ -187,8 +187,7 @@ export default {
         max-width: 418px;
       }
 
-      &:first-child,
-      &:nth-child(2) {
+      &:not(:last-child) {
         margin: 0 0 30px;
       }
 

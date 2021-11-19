@@ -34,9 +34,26 @@
         </ul>
       </nav>
       <div class="header__actions">
-        <div class="header__lang">
-          <p>{{ $i18n.locale }}</p>
+        <div
+          v-click-outside="
+            () => {
+              isActive = false
+            }
+          "
+          class="header__lang"
+          @click="isActive = !isActive"
+        >
+          <p>{{ activeName[0].name }}</p>
           <arrow class="arrow" />
+          <div class="header__actions-menu" :class="{ isActive }">
+            <nuxt-link
+              v-for="locale in availableLocales"
+              :key="locale.code"
+              :to="switchLocalePath(locale.code)"
+            >
+              {{ locale.name }}
+            </nuxt-link>
+          </div>
         </div>
 
         <a
@@ -71,23 +88,32 @@
               v-for="(item, i) in $t('index.header.navigation')"
               :key="i"
               class="header__menu-mob-item"
-              @click="scrollToSection(idArr[i])"
+              @click="scrollToPos(idArr[i])"
             >
               <p class="big">{{ item }}</p>
             </li>
           </ul>
           <div class="header__actions header__actions--mob">
-            <button class="header__btn btn btn--header">
+            <a
+              class="header__btn btn btn--header"
+              href="https://apix.trade/lk/auth.php"
+            >
               {{ $t('index.header.singInBtn') }}
-            </button>
-            <button class="header__btn btn btn--gradient">
+            </a>
+            <button class="header__btn btn btn--gradient" @click="onRegister">
               <p>
                 {{ $t('index.header.singUpBtn') }}
               </p>
             </button>
-            <div class="header__lang">
-              <p>{{ $i18n.locale }}</p>
-              <arrow class="arrow" />
+            <div class="header__lang header__lang--mobile">
+              <nuxt-link
+                v-for="locale in availableLocales"
+                :key="locale.code"
+                :to="switchLocalePath(locale.code)"
+                class="p"
+              >
+                {{ locale.name }}
+              </nuxt-link>
             </div>
           </div>
         </div>
@@ -99,6 +125,7 @@
 <script>
 import { mapMutations } from 'vuex'
 import Arrow from '@/assets/svg/arrow.svg?inline'
+import { debounce } from '@/helpers/common'
 
 export default {
   name: 'ApixHeader',
@@ -116,9 +143,24 @@ export default {
       ],
       isBurgerOpen: false,
       activeSection: '#main',
+      isActive: false,
     }
   },
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale)
+    },
+    activeName() {
+      return this.$i18n.locales.filter((i) => i.code === this.$i18n.locale)
+    },
+  },
+  watch: {
+    $route() {
+      this.isBurgerOpen = false
+    },
+  },
   mounted() {
+    this.isBurgerOpen = false
     this.event = window.addEventListener(
       'scroll',
       () => {
@@ -139,7 +181,11 @@ export default {
           const elem = entry.target
 
           if (entry.intersectionRatio >= 0.1) {
-            this.activeSection = `#${elem.id}`
+            const debounceSection = debounce(() => {
+              this.activeSection = `#${elem.id}`
+            }, 200)
+
+            debounceSection()
           }
         }
       })
@@ -222,7 +268,6 @@ export default {
     &-link {
       cursor: pointer;
       padding: 8px;
-      margin: 0 6px;
       line-height: 1.73;
       position: relative;
       font-weight: 600;
@@ -272,9 +317,63 @@ export default {
   &__actions {
     display: flex;
     align-items: center;
+    position: relative;
 
     &-item {
       margin: 0 27px 0 0;
+    }
+
+    &-menu {
+      position: absolute;
+      left: -25px;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 25px;
+      background: #222328;
+      border: 1px solid #333566;
+      border-radius: 22px;
+      box-shadow: inset 0 0 5px 2px rgb(186 74 255 / 74%);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+
+      &.isActive {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      a {
+        text-transform: uppercase;
+        color: $white;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        &:not(:last-child) {
+          margin: 0 0 15px;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 1px;
+          background: #e156e4;
+          box-shadow: 0 0 10px 1px #e156e4;
+          opacity: 0;
+          transform: translateY(-2px);
+          transition: 0.3s;
+        }
+        &:hover {
+          &:after {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
     }
   }
 
@@ -301,7 +400,7 @@ export default {
     cursor: pointer;
     margin-right: 24px;
 
-    p {
+    & > p {
       text-transform: uppercase;
       letter-spacing: 0.3px;
       margin: 0 8px 0 0;
@@ -310,6 +409,21 @@ export default {
     .arrow {
       width: 14px;
       transform: scale(-1);
+    }
+
+    &--mobile {
+      display: flex;
+      margin: 0 0 0 10px;
+
+      a {
+        color: $white;
+        text-decoration: none;
+        display: inline-block;
+        text-transform: uppercase;
+        &:not(:last-child) {
+          margin: 0 5px 0 0;
+        }
+      }
     }
   }
 

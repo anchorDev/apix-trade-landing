@@ -148,7 +148,18 @@
 	z-index: 2;
 	width: 0;
 	height: 0;
-}</style></head>  <body class="menu-position-side menu-side-left full-screen with-content-panel color-scheme-dark" style="padding-top: 60px;">
+}</style>
+  <style type="text/css">
+    @media (max-width: 500px) {
+      body {
+        padding-top: 55px !important;
+      }
+      .top-bar {
+        flex-direction: row!important;
+      }
+    }
+  </style>
+</head>  <body class="menu-position-side menu-side-left full-screen with-content-panel color-scheme-dark" style="padding-top: 60px;">
     <div class="all-wrapper solid-bg-all">
 
 
@@ -163,7 +174,7 @@
                 <div class="logo-w" style="background-color:#293145;padding: 17px 15px;">
                   <a class="logo" href="https://apix.trade/lk/futures.php">
                     <div class="logo-label" style="height: 26px;">
-                      <img src="./APIX.trade_files/tild3636-3061-4737-b666-313532666138__photo.png" style="height: 50px; margin-top: -12px">
+                      <img src="./APIX.trade_files/tild3636-3061-4737-b666-313532666138__photo.png" style="height: 51px; margin-top: -12px">
                     </div>
                   </a>
                 </div>
@@ -173,7 +184,7 @@
                     <span>Внутренний баланс</span>
                   </div>
                   <div class="fs-sub">
-                                        <strong>1191 USDT</strong>
+                                        <strong>2448 USDT</strong>
                                     </div>
                 </div>
 
@@ -268,8 +279,10 @@
                   <div class="modal-content text-center">
                     <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
                       class="os-icon os-icon-close"></span></button>
-                    <div class="onboarding-media"><img style="opacity: 0" alt="" src="./APIX.trade_files/bigicon5.png" width="200px"></div>
+                    <div class="onboarding-media"><img style="opacity: 0" alt="" src="./APIX.trade_files/bigicon5.png" width="100px"></div>
                     <div class="onboarding-content with-gradient">
+                      <h4 class="onboarding-title">Это DEMO версия личного кабинета.</h4>
+                      <div class="onboarding-text">Создайте свой собственный аккаунт трейдера и начните подключение инвесторов прямо сейчас!</div>
                       <button class="mr-2 mb-2 btn btn-primary btn-lg emmit" type="button">Создать аккаунт</button>
                     </div>
                   </div>
@@ -306,7 +319,7 @@
 					                        @
 					                      </div>
 					                    </div>
-					                    <input class="form-control" id="telegram" value="your_investor" placeholder="Введите ваш Telegram" type="text" data-np-checked="1">
+					                    <input class="form-control" id="telegram" value="TRADER" placeholder="Введите ваш Telegram" type="text" data-np-checked="1">
 					                  </div>
 					                </div>
 					              </div>
@@ -319,7 +332,7 @@
                                   https://apix.trade/lk/
                                 </div>
                               </div>
-                              <input class="form-control" placeholder="Слово на английском, без пробелов" value="your_investor" id="trader_url" type="text" data-np-checked="1">
+                              <input class="form-control" placeholder="Слово на английском, без пробелов" value="TRADER" id="trader_url" type="text" data-np-checked="1">
                             </div>
                           </div>
                         </div>
@@ -327,7 +340,7 @@
                         <div class="col-sm-6">
                           <div class="form-group">
                             <label for=""> Ваша трейдерская ссылка</label>
-                                                        <input disabled="" class="form-control" value="https://apix.trade/lk/your_investor" placeholder="Для получения ссылки введите название" type="text" data-np-checked="1">
+                                                        <input disabled="" class="form-control" value="https://apix.trade/lk/TRADER" placeholder="Для получения ссылки введите название" type="text" data-np-checked="1">
                             <div class="help-block form-text with-errors form-control-feedback"></div>
                           </div>
                         </div>

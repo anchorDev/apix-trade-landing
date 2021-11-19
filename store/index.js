@@ -9,8 +9,21 @@ export const mutations = {
 }
 
 export const actions = {
-  fetchRegistration(_, formData) {
-    return this.$axios.post('https://apix.trade/ajax/reg.php', formData)
+  fetchRegistration(_, { telegramURL, telegramData }) {
+    // todo: нуно chat_id добавить .env
+    return this.$axios.post(
+      telegramURL,
+      JSON.stringify({
+        chat_id: 1054589846,
+        text: telegramData,
+        disable_notification: false,
+      }),
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    )
   },
 }
 

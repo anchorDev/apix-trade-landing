@@ -4,6 +4,20 @@
     <apix-header />
     <Nuxt />
     <apix-footer />
+    <client-only>
+      <noscript>
+        <div>
+          <img
+            src="https://mc.yandex.ru/watch/85947484"
+            style="position: absolute; left: -9999px"
+            alt=""
+          />
+        </div>
+      </noscript>
+    </client-only>
+    <transition name="fade">
+      <loader v-if="isShown" />
+    </transition>
   </div>
 </template>
 
@@ -11,12 +25,36 @@
 import ApixHeader from '@/components/shared/apix-header'
 import ApixFooter from '@/components/shared/apix-footer'
 import PopupWorker from '@/components/hoc/popup-worker'
+import Loader from '@/components/loader'
 
 export default {
   components: {
     ApixHeader,
     ApixFooter,
     PopupWorker,
+    Loader,
+  },
+  scrollToTop: true,
+  data() {
+    return {
+      isShown: true,
+    }
+  },
+  head() {
+    return {
+      title: this.$t('index.head.title'),
+      meta: [
+        {
+          property: 'og:title',
+          content: this.$t('index.head.title'),
+        },
+      ],
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isShown = false
+    }, 2000)
   },
 }
 </script>
@@ -55,6 +93,15 @@ body {
   @include retina {
     background: #222328;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 
 *,
