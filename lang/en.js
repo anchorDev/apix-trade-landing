@@ -19,9 +19,9 @@ export default {
     hero: {
       title: 'Copy Trades Platform',
       list: [
-        'Automatically copy every trade to your investor’s accounts\n',
-        'Our intelligent system automatically calculates and splits profits between traders and investors',
-        'Secure API connection — keys that provide read-only access to trades',
+        'Automatically copy every trade to\nyour investor’s accounts',
+        'Our intelligent system automatically\ncalculatesand splits profits\nbetween traders and investors',
+        'Secure API connection — keys that\nprovide read-only access to trades',
       ],
       btn_1: 'Create an Account',
       btn_2: 'Sign In',
@@ -62,7 +62,7 @@ export default {
     },
     request: {
       text: "Interested? Test our platform right now — it's free!",
-      btn: 'Test',
+      btn: 'Test Product',
     },
     functionality: {
       title: 'How It Works',
@@ -236,11 +236,11 @@ export default {
       links: [
         {
           name: 'Privacy Policy',
-          link: `https://docs.google.com/document/d/1Pm3REwgQPK8aGI7v5wC-ZFwQv3B-Smv-9npXKviinHc/edit?usp=sharing`,
+          link: `./Privacy_Policy_APIX.pdf`,
         },
         {
           name: 'Terms of Use',
-          link: `https://docs.google.com/document/d/1FFIBkbiiC13fXbpc1E1NoGNeLdqdS0oT85LAz742dVM/edit?usp=sharing`,
+          link: `./Terms_of_Use_(APIX TRADE).pdf`,
         },
       ],
     },

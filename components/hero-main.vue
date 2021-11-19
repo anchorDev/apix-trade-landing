@@ -149,7 +149,6 @@ export default {
         background-clip: text;
         -webkit-text-fill-color: transparent;
         color: transparent;
-        max-width: 320px;
       }
     }
   }

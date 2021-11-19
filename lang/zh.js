@@ -229,11 +229,11 @@ export default {
       links: [
         {
           name: '隐私政策',
-          link: `https://docs.google.com/document/d/1Pm3REwgQPK8aGI7v5wC-ZFwQv3B-Smv-9npXKviinHc/edit?usp=sharing`,
+          link: `./Privacy_Policy_APIX.pdf`,
         },
         {
           name: '使用条款',
-          link: `https://docs.google.com/document/d/1FFIBkbiiC13fXbpc1E1NoGNeLdqdS0oT85LAz742dVM/edit?usp=sharing`,
+          link: `./Terms_of_Use_(APIX TRADE).pdf`,
         },
       ],
     },

@@ -10,14 +10,14 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { property: 'og:url', content: 'http://apix.trade' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: '/apix-trade-landing/photo.png' },
+      { property: 'og:image', content: '/photo.png' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/apix-trade-landing/favicon.ico',
+        href: '/favicon.ico',
       },
     ],
     script: [
@@ -162,13 +162,13 @@ export default {
     host: '0', // default: localhost
   },
 
-  generate: {
-    dir: 'docs',
-  },
-
-  router: {
-    base: '/apix-trade-landing',
-  },
+  // generate: {
+  //   dir: 'docs',
+  // },
+  //
+  // router: {
+  //   base: '/apix-trade-landing',
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
