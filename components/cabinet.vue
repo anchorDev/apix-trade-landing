@@ -24,10 +24,8 @@
             </li>
           </ul>
         </div>
-        <nuxt-link
+        <p
           v-in-viewport.once
-          to="/demo"
-          target="_blank"
           class="cabinet__col fade-in"
         >
           <div class="cabinet__btn-text">
@@ -46,7 +44,7 @@
               alt="apix.trade"
             />
           </picture>
-        </nuxt-link>
+        </p>
       </div>
     </div>
   </section>

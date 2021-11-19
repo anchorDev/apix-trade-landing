@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html class="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>APIX.trade</title>
+
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="template language" name="keywords">
+  <meta content="APIX.TRADE" name="author">
+  <meta content="APIX.TRADE" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="https://apix.trade/lk/favicon.png" rel="shortcut icon">
+  <link href="https://apix.trade/lk/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./APIX.trade_files/css" rel="stylesheet" type="text/css">
+  <link href="./APIX.trade_files/select2.min.css" rel="stylesheet">
+  <link href="./APIX.trade_files/daterangepicker.css" rel="stylesheet">
+  <link href="./APIX.trade_files/dropzone.css" rel="stylesheet">
+  <link href="./APIX.trade_files/dataTables.bootstrap.min.css" rel="stylesheet">
+  <link href="./APIX.trade_files/fullcalendar.min.css" rel="stylesheet">
+  <link href="./APIX.trade_files/perfect-scrollbar.min.css" rel="stylesheet">
+  <link href="./APIX.trade_files/slick.css" rel="stylesheet">
+  <link href="./APIX.trade_files/main.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script>
+  document.createElement('figure');
+  document.createElement('figcaption');
+  </script>
+  <![endif]-->
+  <link href="./APIX.trade_files/timeTo.css" type="text/css" rel="stylesheet">
+  <style type="text/css">
+    .loader_spin {
+      text-align: center;
+    }
+
+    @media (min-width: 600px) {
+    }
+
+    .spinner {
+      --animation-duration: 3000ms;
+      width: 100px;
+      height: 100px;
+
+    }
+
+    .spinner-item {
+      position: absolute;
+      top: calc(50% - 100px / 2);
+      left: calc(50% - 100px / 2);
+      width: 100px;
+      height: 100px;
+      background: #272324;
+      border-radius: 50%;
+      animation: spinner6 3000ms ease-in-out infinite;
+    }
+
+    @keyframes spinner6 {
+      0%,
+      100% {
+        transform: scale(0.25);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1);
+        opacity: 0;
+      }
+    }
+
+    .spinner-item:nth-of-type(1) {
+      background: #10a4f6;
+    }
+
+    .spinner-item:nth-of-type(2) {
+      background: #1086d1;
+      animation-delay: calc(3000ms / -2);
+    }
+  </style>
+  <style>.cke {
+    visibility: hidden;
+  }</style>
+  <style type="text/css" id="notify-bootstrap">.notifyjs-bootstrap-base {
+    font-weight: bold;
+    padding: 8px 15px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    white-space: nowrap;
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-position: 3px 7px;
+  }
+
+  .notifyjs-bootstrap-error {
+    color: #B94A48;
+    background-color: #F2DEDE;
+    border-color: #EED3D7;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtRJREFUeNqkVc1u00AQHq+dOD+0poIQfkIjalW0SEGqRMuRnHos3DjwAH0ArlyQeANOOSMeAA5VjyBxKBQhgSpVUKKQNGloFdw4cWw2jtfMOna6JOUArDTazXi/b3dm55socPqQhFka++aHBsI8GsopRJERNFlY88FCEk9Yiwf8RhgRyaHFQpPHCDmZG5oX2ui2yilkcTT1AcDsbYC1NMAyOi7zTX2Agx7A9luAl88BauiiQ/cJaZQfIpAlngDcvZZMrl8vFPK5+XktrWlx3/ehZ5r9+t6e+WVnp1pxnNIjgBe4/6dAysQc8dsmHwPcW9C0h3fW1hans1ltwJhy0GxK7XZbUlMp5Ww2eyan6+ft/f2FAqXGK4CvQk5HueFz7D6GOZtIrK+srupdx1GRBBqNBtzc2AiMr7nPplRdKhb1q6q6zjFhrklEFOUutoQ50xcX86ZlqaZpQrfbBdu2R6/G19zX6XSgh6RX5ubyHCM8nqSID6ICrGiZjGYYxojEsiw4PDwMSL5VKsC8Yf4VRYFzMzMaxwjlJSlCyAQ9l0CW44PBADzXhe7xMdi9HtTrdYjFYkDQL0cn4Xdq2/EAE+InCnvADTf2eah4Sx9vExQjkqXT6aAERICMewd/UAp/IeYANM2joxt+q5VI+ieq2i0Wg3l6DNzHwTERPgo1ko7XBXj3vdlsT2F+UuhIhYkp7u7CarkcrFOCtR3H5JiwbAIeImjT/YQKKBtGjRFCU5IUgFRe7fF4cCNVIPMYo3VKqxwjyNAXNepuopyqnld602qVsfRpEkkz+GFL1wPj6ySXBpJtWVa5xlhpcyhBNwpZHmtX8AGgfIExo0ZpzkWVTBGiXCSEaHh62/PoR0p/vHaczxXGnj4bSo+G78lELU80h1uogBwWLf5YlsPmgDEd4M236xjm+8nm4IuE/9u+/PH2JXZfbwz4zw1WbO+SQPpXfwG/BBgAhCNZiSb/pOQAAAAASUVORK5CYII=);
+  }
+
+  .notifyjs-bootstrap-success {
+    color: #468847;
+    background-color: #DFF0D8;
+    border-color: #D6E9C6;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAutJREFUeNq0lctPE0Ecx38zu/RFS1EryqtgJFA08YCiMZIAQQ4eRG8eDGdPJiYeTIwHTfwPiAcvXIwXLwoXPaDxkWgQ6islKlJLSQWLUraPLTv7Gme32zoF9KSTfLO7v53vZ3d/M7/fIth+IO6INt2jjoA7bjHCJoAlzCRw59YwHYjBnfMPqAKWQYKjGkfCJqAF0xwZjipQtA3MxeSG87VhOOYegVrUCy7UZM9S6TLIdAamySTclZdYhFhRHloGYg7mgZv1Zzztvgud7V1tbQ2twYA34LJmF4p5dXF1KTufnE+SxeJtuCZNsLDCQU0+RyKTF27Unw101l8e6hns3u0PBalORVVVkcaEKBJDgV3+cGM4tKKmI+ohlIGnygKX00rSBfszz/n2uXv81wd6+rt1orsZCHRdr1Imk2F2Kob3hutSxW8thsd8AXNaln9D7CTfA6O+0UgkMuwVvEFFUbbAcrkcTA8+AtOk8E6KiQiDmMFSDqZItAzEVQviRkdDdaFgPp8HSZKAEAL5Qh7Sq2lIJBJwv2scUqkUnKoZgNhcDKhKg5aH+1IkcouCAdFGAQsuWZYhOjwFHQ96oagWgRoUov1T9kRBEODAwxM2QtEUl+Wp+Ln9VRo6BcMw4ErHRYjH4/B26AlQoQQTRdHWwcd9AH57+UAXddvDD37DmrBBV34WfqiXPl61g+vr6xA9zsGeM9gOdsNXkgpEtTwVvwOklXLKm6+/p5ezwk4B+j6droBs2CsGa/gNs6RIxazl4Tc25mpTgw/apPR1LYlNRFAzgsOxkyXYLIM1V8NMwyAkJSctD1eGVKiq5wWjSPdjmeTkiKvVW4f2YPHWl3GAVq6ymcyCTgovM3FzyRiDe2TaKcEKsLpJvNHjZgPNqEtyi6mZIm4SRFyLMUsONSSdkPeFtY1n0mczoY3BHTLhwPRy9/lzcziCw9ACI+yql0VLzcGAZbYSM5CCSZg1/9oc/nn7+i8N9p/8An4JMADxhH+xHfuiKwAAAABJRU5ErkJggg==);
+  }
+
+  .notifyjs-bootstrap-info {
+    color: #3A87AD;
+    background-color: #D9EDF7;
+    border-color: #BCE8F1;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYFAhkSsdes/QAAA8dJREFUOMvVlGtMW2UYx//POaWHXg6lLaW0ypAtw1UCgbniNOLcVOLmAjHZolOYlxmTGXVZdAnRfXQm+7SoU4mXaOaiZsEpC9FkiQs6Z6bdCnNYruM6KNBw6YWewzl9z+sHImEWv+vz7XmT95f/+3/+7wP814v+efDOV3/SoX3lHAA+6ODeUFfMfjOWMADgdk+eEKz0pF7aQdMAcOKLLjrcVMVX3xdWN29/GhYP7SvnP0cWfS8caSkfHZsPE9Fgnt02JNutQ0QYHB2dDz9/pKX8QjjuO9xUxd/66HdxTeCHZ3rojQObGQBcuNjfplkD3b19Y/6MrimSaKgSMmpGU5WevmE/swa6Oy73tQHA0Rdr2Mmv/6A1n9w9suQ7097Z9lM4FlTgTDrzZTu4StXVfpiI48rVcUDM5cmEksrFnHxfpTtU/3BFQzCQF/2bYVoNbH7zmItbSoMj40JSzmMyX5qDvriA7QdrIIpA+3cdsMpu0nXI8cV0MtKXCPZev+gCEM1S2NHPvWfP/hL+7FSr3+0p5RBEyhEN5JCKYr8XnASMT0xBNyzQGQeI8fjsGD39RMPk7se2bd5ZtTyoFYXftF6y37gx7NeUtJJOTFlAHDZLDuILU3j3+H5oOrD3yWbIztugaAzgnBKJuBLpGfQrS8wO4FZgV+c1IxaLgWVU0tMLEETCos4xMzEIv9cJXQcyagIwigDGwJgOAtHAwAhisQUjy0ORGERiELgG4iakkzo4MYAxcM5hAMi1WWG1yYCJIcMUaBkVRLdGeSU2995TLWzcUAzONJ7J6FBVBYIggMzmFbvdBV44Corg8vjhzC+EJEl8U1kJtgYrhCzgc/vvTwXKSib1paRFVRVORDAJAsw5FuTaJEhWM2SHB3mOAlhkNxwuLzeJsGwqWzf5TFNdKgtY5qHp6ZFf67Y/sAVadCaVY5YACDDb3Oi4NIjLnWMw2QthCBIsVhsUTU9tvXsjeq9+X1d75/KEs4LNOfcdf/+HthMnvwxOD0wmHaXr7ZItn2wuH2SnBzbZAbPJwpPx+VQuzcm7dgRCB57a1uBzUDRL4bfnI0RE0eaXd9W89mpjqHZnUI5Hh2l2dkZZUhOqpi2qSmpOmZ64Tuu9qlz/SEXo6MEHa3wOip46F1n7633eekV8ds8Wxjn37Wl63VVa+ej5oeEZ/82ZBETJjpJ1Rbij2D3Z/1trXUvLsblCK0XfOx0SX2kMsn9dX+d+7Kf6h8o4AIykuffjT8L20LU+w4AZd5VvEPY+XpWqLV327HR7DzXuDnD8r+ovkBehJ8i+y8YAAAAASUVORK5CYII=);
+  }
+
+  .notifyjs-bootstrap-warn {
+    color: #C09853;
+    background-color: #FCF8E3;
+    border-color: #FBEED5;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABJlBMVEXr6eb/2oD/wi7/xjr/0mP/ykf/tQD/vBj/3o7/uQ//vyL/twebhgD/4pzX1K3z8e349vK6tHCilCWbiQymn0jGworr6dXQza3HxcKkn1vWvV/5uRfk4dXZ1bD18+/52YebiAmyr5S9mhCzrWq5t6ufjRH54aLs0oS+qD751XqPhAybhwXsujG3sm+Zk0PTwG6Shg+PhhObhwOPgQL4zV2nlyrf27uLfgCPhRHu7OmLgAafkyiWkD3l49ibiAfTs0C+lgCniwD4sgDJxqOilzDWowWFfAH08uebig6qpFHBvH/aw26FfQTQzsvy8OyEfz20r3jAvaKbhgG9q0nc2LbZxXanoUu/u5WSggCtp1anpJKdmFz/zlX/1nGJiYmuq5Dx7+sAAADoPUZSAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfdBgUBGhh4aah5AAAAlklEQVQY02NgoBIIE8EUcwn1FkIXM1Tj5dDUQhPU502Mi7XXQxGz5uVIjGOJUUUW81HnYEyMi2HVcUOICQZzMMYmxrEyMylJwgUt5BljWRLjmJm4pI1hYp5SQLGYxDgmLnZOVxuooClIDKgXKMbN5ggV1ACLJcaBxNgcoiGCBiZwdWxOETBDrTyEFey0jYJ4eHjMGWgEAIpRFRCUt08qAAAAAElFTkSuQmCC);
+  }
+  </style>
+  <style type="text/css" id="core-notify">.notifyjs-corner {
+    position: fixed;
+    margin: 5px;
+    z-index: 1050;
+  }
+
+  .notifyjs-corner .notifyjs-wrapper,
+  .notifyjs-corner .notifyjs-container {
+    position: relative;
+    display: block;
+    height: inherit;
+    width: inherit;
+    margin: 3px;
+  }
+
+  .notifyjs-wrapper {
+    z-index: 1;
+    position: absolute;
+    display: inline-block;
+    height: 0;
+    width: 0;
+  }
+
+  .notifyjs-container {
+    display: none;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .notifyjs-hidable {
+    cursor: pointer;
+  }
+
+  [data-notify-text], [data-notify-html] {
+    position: relative;
+  }
+
+  .notifyjs-arrow {
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 0;
+  }</style>
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="./APIX.trade_files/translateelement.css">
+  <style type="text/css">
+    @media (max-width: 500px) {
+      body {
+        padding-top: 55px !important;
+      }
+      .top-bar {
+        flex-direction: row!important;
+      }
+    }
+  </style>
+</head>
+<body class="menu-position-side menu-side-left full-screen with-content-panel color-scheme-dark"
+      style="padding-top: 60px;">
+<div class="all-wrapper solid-bg-all" style="min-height: 800px;">
+
+
+  <div class="layout-w">
+    <div class="content-w">
+      <!--------------------
+      START - Top Bar
+      -------------------->
+      <div class="top-bar color-scheme-dark navbar-fixed-top"
+           style="background-color:#293145; position: fixed; top: 0; width: 100%; z-index: 9;box-shadow: 0px 12px 17px -14px #000000;">
+        <div class="fancy-selector-w">
+          <div class="fancy-selector-current" style="background-color: #1e62eb;">
+            <div class="logo-w" style="background-color:#293145;padding: 17px 15px;">
+              <a class="logo" href="https://apix.trade/lk/futures.php">
+                <div class="logo-label" style="height: 26px;">
+                  <img src="./APIX.trade_files/tild3636-3061-4737-b666-313532666138__photo.png" style="height: 51px; margin-top: -12px;">
+                </div>
+              </a>
+            </div>
+            <div class="fs-main-info" data-target="#cashOutModal" data-toggle="modal"
+                 style="background-color: #1e62eb;cursor: pointer;">
+              <div class="fs-name">
+                <span>Внутренний баланс</span>
+              </div>
+              <div class="fs-sub">
+                <strong>2448 USDT</strong>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <!--------------------
+        START - Top Menu Controls
+        -------------------->
+        <div class="top-menu-controls" style="padding: 0;">
+          <div class="fs-main-info" style="padding: 0px 9px;border-right: 0.2px solid rgba(60, 60, 60, 0.65);">
+            <div class="fs-name">
+              <span style="color: #52b4fa;font-weight: 900;font-size: 18px;"><b>BTC</b></span>
+            </div>
+            <div class="fs-sub" style="font-size: 12px;">
+              $50000
+            </div>
+          </div>
+          <div class="fs-main-info" style="padding: 0px 8px;border-right: 0.2px solid rgba(60, 60, 60, 0.65);">
+            <div class="fs-name">
+              <span style="color: #52b4fa;font-weight: 900;font-size: 18px;"><b>ETH</b></span>
+            </div>
+            <div class="fs-sub" style="font-size: 12px;">
+              $3500
+            </div>
+          </div>
+          <div class="fs-main-info" style="padding: 0px 8px;border-right: 0.2px solid rgba(60, 60, 60, 0.65);">
+            <div class="fs-name">
+              <span style="color: #52b4fa;font-weight: 900;font-size: 18px;"><b>XRP</b></span>
+            </div>
+            <div class="fs-sub" style="font-size: 12px;">
+              $2.22
+            </div>
+          </div>
+
+
+          <!--------------------
+START - Settings Link in secondary top menu
+---------------------->
+          <div class="top-icon top-settings os-dropdown-trigger os-dropdown-position-left">
+            <i class="os-icon os-icon-ui-46"></i>
+            <div class="os-dropdown">
+              <div class="icon-w">
+                <i class="os-icon os-icon-ui-46"></i>
+              </div>
+              <ul>
+                <li>
+                  <a class="redirect-home" href="#">
+                    <i class="os-icon os-icon-user"></i>
+                    <span>Личный кабинет</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="redirect-settings" href="#">
+                    <i class="os-icon os-icon-settings"></i>
+                    <span>Настройки</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="os-icon os-icon-wallet-loaded"></i>
+                    <span>История платежей</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="os-icon os-icon-ui-15"></i>
+                    <span>Выйти</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--------------------
+          END - Settings Link in secondary top menu
+          -------------------->
+        </div>
+        <!--------------------
+        END - Top Menu Controls
+        -------------------->
+      </div>
+      <!--------------------
+      END - Top Bar
+      -------------------->
+      <div class="content-i">
+        <div class="content-box">
+
+          <div aria-hidden="true" class="onboarding-modal modal fade animated" id="cashOutModal" role="dialog"
+               tabindex="-1">
+            <div class="modal-dialog modal-centered" role="document">
+              <div class="modal-content text-center">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                  class="os-icon os-icon-close"></span></button>
+                <div class="onboarding-media"><img style="opacity: 0" alt="" src="./APIX.trade_files/bigicon5.png" width="100px"></div>
+                <div class="onboarding-content with-gradient">
+                  <h4 class="onboarding-title">Это DEMO версия личного кабинета.</h4>
+                  <div class="onboarding-text">Создайте свой собственный аккаунт трейдера и начните подключение инвесторов прямо сейчас!</div>
+                  <button class="mr-2 mb-2 btn btn-primary btn-lg emmit" type="button">Создать аккаунт</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="element-wrapper col-12 col-sm-12 col-xxl-12">
+                <div class="element-box" style="box-shadow: 0px 12px 17px -14px rgba(0, 0, 0, 0.50);">
+                  <div class="row">
+                    <h5 class="form-header col-lg-10 col-xxl-4">
+                      Неоплаченные счета инвесторов
+                    </h5>
+                    <div class="col-lg-2 col-xxl-2 ml-auto" style="width: 21%;max-width: unset;flex: unset;">
+                      <!--START - BALANCES-->
+                      <div class="element-balances" style="padding:0px;">
+
+
+                        <div class="balance">
+                          <div class="balance-title" style="font-size: 14px;">
+                            Всего к оплате
+                          </div>
+                          <div class="balance-value text-center" style="font-size: 22px;">
+                            $13833
+                          </div>
+                        </div>
+                      </div>
+                      <!--END - BALANCES-->
+                    </div>
+
+                  </div>
+                  <div class="table-responsive">
+                    <div id="active_positions2_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-6"></div>
+                        <div class="col-sm-12 col-md-6"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <table  width="100%"
+                                 class="table table-striped table-lightfont dataTable" role="grid"
+                                 aria-describedby="active_positions2_info" style="width: 100%;">
+                            <thead>
+                            <tr class="text-center" role="row">
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 73px;">Статус</th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 180px;">Дата платежа
+                              </th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 196px;">Назначение</th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 180px;">Сумма платежа
+                              </th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 102px;">Оплачено</th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 163px;">Нужно
+                                оплатить
+                              </th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 212px;">Контакт</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr class="text-center">
+                              <th rowspan="1" colspan="1">Статус</th>
+                              <th rowspan="1" colspan="1">Дата платежа</th>
+                              <th rowspan="1" colspan="1">Назначение</th>
+                              <th rowspan="1" colspan="1">Сумма платежа</th>
+                              <th rowspan="1" colspan="1">Оплачено</th>
+                              <th rowspan="1" colspan="1">Нужно оплатить</th>
+                              <th rowspan="1" colspan="1">Контакт</th>
+                            </tr>
+                            </tfoot>
+                            <tbody style="color:#fff;">
+
+
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill yellow" data-title="Ожидание поступления средств"
+                                     data-toggle="tooltip" data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:21
+                              </td>
+                              <td>
+                                <b>Оплата комиссии трейдера</b>
+                              </td>
+                              <td>
+                                $1173.91420363
+                              </td>
+                              <td>
+                                $0
+                              </td>
+                              <td>
+                                $1173.91
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill yellow" data-title="Ожидание поступления средств"
+                                     data-toggle="tooltip" data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:21
+                              </td>
+                              <td>
+                                <b>Оплата комиссии трейдера</b>
+                              </td>
+                              <td>
+                                $401.00855213
+                              </td>
+                              <td>
+                                $353
+                              </td>
+                              <td>
+                                $48.02
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill yellow" data-title="Ожидание поступления средств"
+                                     data-toggle="tooltip" data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:21
+                              </td>
+                              <td>
+                                <b>Оплата комиссии трейдера</b>
+                              </td>
+                              <td>
+                                $54.63001018
+                              </td>
+                              <td>
+                                $0
+                              </td>
+                              <td>
+                                $54.63
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill yellow" data-title="Ожидание поступления средств"
+                                     data-toggle="tooltip" data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:21
+                              </td>
+                              <td>
+                                <b>Оплата комиссии трейдера</b>
+                              </td>
+                              <td>
+                                $892.99414049
+                              </td>
+                              <td>
+                                $892
+                              </td>
+                              <td>
+                                $0
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill yellow" data-title="Ожидание поступления средств"
+                                     data-toggle="tooltip" data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:21
+                              </td>
+                              <td>
+                                <b>Оплата комиссии трейдера</b>
+                              </td>
+                              <td>
+                                $7.507786045
+                              </td>
+                              <td>
+                                $0
+                              </td>
+                              <td>
+                                $7.51
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill yellow" data-title="Ожидание поступления средств"
+                                     data-toggle="tooltip" data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:21
+                              </td>
+                              <td>
+                                <b>Оплата комиссии трейдера</b>
+                              </td>
+                              <td>
+                                $24.339118725
+                              </td>
+                              <td>
+                                $0
+                              </td>
+                              <td>
+                                $24.34
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill yellow" data-title="Ожидание поступления средств"
+                                     data-toggle="tooltip" data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:21
+                              </td>
+                              <td>
+                                <b>Оплата комиссии трейдера</b>
+                              </td>
+                              <td>
+                                $501.32053375
+                              </td>
+                              <td>
+                                $501.32
+                              </td>
+                              <td>
+                                $0
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill yellow" data-title="Ожидание поступления средств"
+                                     data-toggle="tooltip" data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:21
+                              </td>
+                              <td>
+                                <b>Оплата комиссии трейдера</b>
+                              </td>
+                              <td>
+                                $57.98403339
+                              </td>
+                              <td>
+                                $0
+                              </td>
+                              <td>
+                                $57.98
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill yellow" data-title="Ожидание поступления средств"
+                                     data-toggle="tooltip" data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:21
+                              </td>
+                              <td>
+                                <b>Оплата комиссии трейдера</b>
+                              </td>
+                              <td>
+                                $100.092947275
+                              </td>
+                              <td>
+                                $0
+                              </td>
+                              <td>
+                                $100.09
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill yellow" data-title="Ожидание поступления средств"
+                                     data-toggle="tooltip" data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:21
+                              </td>
+                              <td>
+                                <b>Оплата комиссии трейдера</b>
+                              </td>
+                              <td>
+                                $84.196658915
+                              </td>
+                              <td>
+                                $0
+                              </td>
+                              <td>
+                                $84.2
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12 col-md-5">
+                          <div class="dataTables_info" id="active_positions2_info" role="status" aria-live="polite">
+                            Отображена страница 1 из 24
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7 open-modal-custom" >
+                          <div class="dataTables_paginate paging_simple_numbers" id="active_positions2_paginate">
+                            <ul class="pagination">
+                              <li class="paginate_button page-item previous" id="active_positions2_previous"><a
+                                href="https://apix.trade/lk/pays.php#" aria-controls="active_positions2" data-dt-idx="0"
+                                tabindex="0" class="page-link">Предыдущая</a></li>
+                              <li class="paginate_button page-item active"><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="active_positions2"
+                                                                        data-dt-idx="1" tabindex="0"
+                                                                        class="page-link">1</a></li>
+                              <li class="paginate_button page-item disabled" id="active_positions2_ellipsis"><a
+                                href="https://apix.trade/lk/pays.php#" aria-controls="active_positions2" data-dt-idx="2"
+                                tabindex="0" class="page-link">1</a></li>
+                              <li class="paginate_button page-item "><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="active_positions2"
+                                                                        data-dt-idx="3" tabindex="0" class="page-link">2</a>
+                              </li>
+                              <li class="paginate_button page-item "><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="active_positions2"
+                                                                        data-dt-idx="4" tabindex="0" class="page-link">3</a>
+                              </li>
+                              <li class="paginate_button page-item "><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="active_positions2"
+                                                                        data-dt-idx="5" tabindex="0" class="page-link">4</a>
+                              </li>
+                              <li class="paginate_button page-item"><a href="https://apix.trade/lk/pays.php#"
+                                                                              aria-controls="active_positions2"
+                                                                              data-dt-idx="6" tabindex="0"
+                                                                              class="page-link">…</a></li>
+                              <li class="paginate_button page-item "><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="active_positions2"
+                                                                        data-dt-idx="7" tabindex="0" class="page-link">24</a>
+                              </li>
+                              <li class="paginate_button page-item next" id="active_positions2_next"><a
+                                href="https://apix.trade/lk/pays.php#" aria-controls="active_positions2" data-dt-idx="8"
+                                tabindex="0" class="page-link">Следующая</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="element-wrapper col-12 col-sm-12 col-xxl-12">
+                <div class="element-box" style="box-shadow: 0px 12px 17px -14px rgba(0, 0, 0, 0.50);">
+                  <div class="row">
+                    <h5 class="form-header col-lg-6 col-xxl-4">
+                      Оплата комиссий трейдеру от инвесторов
+                    </h5>
+                  </div>
+                  <div class="table-responsive">
+                    <div id="investors_list_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-6"></div>
+                        <div class="col-sm-12 col-md-6"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <table width="100%" class="table table-striped table-lightfont dataTable"
+                                 role="grid" aria-describedby="investors_list_info" style="width: 100%;">
+                            <thead>
+                            <tr class="text-center" role="row">
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 63px;">Статус</th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 159px;">Дата платежа
+                              </th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 107px;">Валюта</th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 170px;">Сумма</th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 242px;">С учетом
+                                комиссии системы
+                              </th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 190px;">Сумма за все
+                                время
+                              </th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 175px;">Контакт</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr class="text-center">
+                              <th rowspan="1" colspan="1">Статус</th>
+                              <th rowspan="1" colspan="1">Дата платежа</th>
+                              <th rowspan="1" colspan="1">Валюта</th>
+                              <th rowspan="1" colspan="1">Сумма</th>
+                              <th rowspan="1" colspan="1">С учетом комиссии системы</th>
+                              <th rowspan="1" colspan="1">Сумма за все время</th>
+                              <th rowspan="1" colspan="1">Контакт</th>
+                            </tr>
+                            </tfoot>
+                            <tbody style="color:#fff;">
+
+
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Платеж прошел успешно" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                21.02.2022 09:29
+                              </td>
+                              <td>
+                                USDT.BEP2
+                              </td>
+                              <td>
+                                $2926.29099957
+                              </td>
+                              <td>
+                                $2341.03
+                              </td>
+                              <td>
+                                $2926.29 ($2341.03)
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Платеж прошел успешно" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 16:54
+                              </td>
+                              <td>
+                                USDT.BEP2
+                              </td>
+                              <td>
+                                $4245.40372738
+                              </td>
+                              <td>
+                                $3396.32
+                              </td>
+                              <td>
+                                $4245.4 ($3396.32)
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Платеж прошел успешно" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 17:40
+                              </td>
+                              <td>
+                                USDT.BEP2
+                              </td>
+                              <td>
+                                $1568.17326602
+                              </td>
+                              <td>
+                                $1254.54
+                              </td>
+                              <td>
+                                $1568.17 ($1254.54)
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Платеж прошел успешно" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 15:47
+                              </td>
+                              <td>
+                                USDT.BEP2
+                              </td>
+                              <td>
+                                $645.810515675
+                              </td>
+                              <td>
+                                $516.65
+                              </td>
+                              <td>
+                                $645.81 ($516.65)
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Платеж прошел успешно" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 22:57
+                              </td>
+                              <td>
+                                USDT.BEP2
+                              </td>
+                              <td>
+                                $345.43426516
+                              </td>
+                              <td>
+                                $276.35
+                              </td>
+                              <td>
+                                $345.43 ($276.35)
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Платеж прошел успешно" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                21.02.2022 16:00
+                              </td>
+                              <td>
+                                USDT.BEP2
+                              </td>
+                              <td>
+                                $2015.83980578
+                              </td>
+                              <td>
+                                $1612.67
+                              </td>
+                              <td>
+                                $2015.84 ($1612.67)
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Платеж прошел успешно" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 19:12
+                              </td>
+                              <td>
+                                USDT.BEP2
+                              </td>
+                              <td>
+                                $649.41289549
+                              </td>
+                              <td>
+                                $519.53
+                              </td>
+                              <td>
+                                $649.41 ($519.53)
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Платеж прошел успешно" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                21.02.2022 07:23
+                              </td>
+                              <td>
+                                USDT.BEP2
+                              </td>
+                              <td>
+                                $979.64589623
+                              </td>
+                              <td>
+                                $783.72
+                              </td>
+                              <td>
+                                $979.65 ($783.72)
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Платеж прошел успешно" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 17:57
+                              </td>
+                              <td>
+                                USDT.BEP2
+                              </td>
+                              <td>
+                                $4891.509010945
+                              </td>
+                              <td>
+                                $3913.21
+                              </td>
+                              <td>
+                                $4891.51 ($3913.21)
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Платеж прошел успешно" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                22.02.2022 19:48
+                              </td>
+                              <td>
+                                USDT.BEP2
+                              </td>
+                              <td>
+                                $380.19522846
+                              </td>
+                              <td>
+                                $304.16
+                              </td>
+                              <td>
+                                $380.2 ($304.16)
+                              </td>
+                              <td>
+                                your_investor
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12 col-md-5">
+                          <div class="dataTables_info" id="investors_list_info" role="status" aria-live="polite">
+                            Отображена страница 1 из 11
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="dataTables_paginate paging_simple_numbers" id="investors_list_paginate">
+                            <ul class="pagination open-modal-custom">
+                              <li class="paginate_button page-item previous disabled" id="investors_list_previous"><a
+                                href="https://apix.trade/lk/pays.php#" aria-controls="investors_list" data-dt-idx="0"
+                                tabindex="0" class="page-link">Предыдущая</a></li>
+                              <li class="paginate_button page-item active"><a href="https://apix.trade/lk/pays.php#"
+                                                                              aria-controls="investors_list"
+                                                                              data-dt-idx="1" tabindex="0"
+                                                                              class="page-link">1</a></li>
+                              <li class="paginate_button page-item "><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="investors_list" data-dt-idx="2"
+                                                                        tabindex="0" class="page-link">2</a></li>
+                              <li class="paginate_button page-item "><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="investors_list" data-dt-idx="3"
+                                                                        tabindex="0" class="page-link">3</a></li>
+                              <li class="paginate_button page-item "><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="investors_list" data-dt-idx="4"
+                                                                        tabindex="0" class="page-link">4</a></li>
+                              <li class="paginate_button page-item "><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="investors_list" data-dt-idx="5"
+                                                                        tabindex="0" class="page-link">5</a></li>
+                              <li class="paginate_button page-item disabled" id="investors_list_ellipsis"><a
+                                href="https://apix.trade/lk/pays.php#" aria-controls="investors_list" data-dt-idx="6"
+                                tabindex="0" class="page-link">…</a></li>
+                              <li class="paginate_button page-item "><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="investors_list" data-dt-idx="7"
+                                                                        tabindex="0" class="page-link">11</a></li>
+                              <li class="paginate_button page-item next" id="investors_list_next"><a
+                                href="https://apix.trade/lk/pays.php#" aria-controls="investors_list" data-dt-idx="8"
+                                tabindex="0" class="page-link">Следующая</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="element-wrapper col-12 col-sm-12 col-xxl-12">
+                <div class="element-box" style="box-shadow: 0px 12px 17px -14px rgba(0, 0, 0, 0.50);">
+                  <div class="row">
+                    <h5 class="form-header col-lg-6 col-xxl-4">
+                      Заявки на вывод средств
+                    </h5>
+                  </div>
+                  <div class="table-responsive">
+                    <div id="trades_history_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-6"></div>
+                        <div class="col-sm-12 col-md-6"></div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <table width="100%" class="table table-striped table-lightfont dataTable"
+                                 role="grid" aria-describedby="trades_history_info" style="width: 100%;">
+                            <thead>
+                            <tr class="text-center" role="row">
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 72px;">Статус</th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 178px;">Дата заявки
+                              </th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 143px;">Сумма вывода
+                              </th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 483px;">Адрес</th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 124px;">MEMO</th>
+                              <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 130px;">Транзакция</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr class="text-center">
+                              <th rowspan="1" colspan="1">Статус</th>
+                              <th rowspan="1" colspan="1">Дата заявки</th>
+                              <th rowspan="1" colspan="1">Сумма вывода</th>
+                              <th rowspan="1" colspan="1">Адрес</th>
+                              <th rowspan="1" colspan="1">MEMO</th>
+                              <th rowspan="1" colspan="1">Транзакция</th>
+                            </tr>
+                            </tfoot>
+                            <tbody style="color:#fff;">
+
+
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill blue" data-title="Отменен" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                4.01.2022 06:52
+                              </td>
+                              <td>
+                                $2892
+                              </td>
+                              <td>
+                                bnb136ns6lf**************dthaad7hq5m4gtkgf23
+                              </td>
+                              <td>
+                                777777777
+                              </td>
+                              <td>
+                                отменен
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill blue" data-title="Отменен" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                4.02.2022 15:45
+                              </td>
+                              <td>
+                                $4994
+                              </td>
+                              <td>
+                                bnb136ns6lf**************dthaad7hq5m4gtkgf23
+                              </td>
+                              <td>
+                                777777777
+                              </td>
+                              <td>
+                                отменен
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Заявка обработана" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                28.12.2021 04:50
+                              </td>
+                              <td>
+                                $3926
+                              </td>
+                              <td>
+                                bnb136ns6lf**************dthaad7hq5m4gtkgf23
+                              </td>
+                              <td>
+                                777777777
+                              </td>
+                              <td>
+                                <a href="#" class='open-modal-custom' target="_blank">транзакция</a>
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Заявка обработана" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                4.01.2022 06:53
+                              </td>
+                              <td>
+                                $2892
+                              </td>
+                              <td>
+                                bnb136ns6lf**************dthaad7hq5m4gtkgf23
+                              </td>
+                              <td>
+                                777777777
+                              </td>
+                              <td>
+                                <a href="#" class='open-modal-custom' target="_blank">транзакция</a>
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Заявка обработана" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                5.01.2022 08:22
+                              </td>
+                              <td>
+                                $2392
+                              </td>
+                              <td>
+                                bnb136ns6lf**************dthaad7hq5m4gtkgf23
+                              </td>
+                              <td>
+                                777777777
+                              </td>
+                              <td>
+                                <a href="#" class='open-modal-custom' target="_blank">транзакция</a>
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Заявка обработана" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                1.02.2022 14:19
+                              </td>
+                              <td>
+                                $39450
+                              </td>
+                              <td>
+                                bnb136ns6lf**************dthaad7hq5m4gtkgf23
+                              </td>
+                              <td>
+                                777777777
+                              </td>
+                              <td>
+                                <a href="#" class='open-modal-custom' target="_blank">транзакция</a>
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Заявка обработана" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                2.02.2022 13:04
+                              </td>
+                              <td>
+                                $25001
+                              </td>
+                              <td>
+                                bnb136ns6lf**************dthaad7hq5m4gtkgf23
+                              </td>
+                              <td>
+                                777777777
+                              </td>
+                              <td>
+                                <a href="#" class='open-modal-custom' target="_blank">транзакция</a>
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Заявка обработана" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                2.02.2022 20:56
+                              </td>
+                              <td>
+                                $6335
+                              </td>
+                              <td>
+                                bnb136ns6lf**************dthaad7hq5m4gtkgf23
+                              </td>
+                              <td>
+                                777777777
+                              </td>
+                              <td>
+                                <a href="#" class='open-modal-custom' target="_blank">транзакция</a>
+                              </td>
+                            </tr>
+                            <tr class="text-center odd" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Заявка обработана" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                3.02.2022 06:56
+                              </td>
+                              <td>
+                                $11204
+                              </td>
+                              <td>
+                                bnb136ns6lf**************dthaad7hq5m4gtkgf23
+                              </td>
+                              <td>
+                                777777777
+                              </td>
+                              <td>
+                                <a href="#" class='open-modal-custom' target="_blank">транзакция</a>
+                              </td>
+                            </tr>
+                            <tr class="text-center even" role="row">
+                              <td>
+                                <div class="status-pill green" data-title="Заявка обработана" data-toggle="tooltip"
+                                     data-original-title="" title=""></div>
+                              </td>
+                              <td>
+                                4.02.2022 18:55
+                              </td>
+                              <td>
+                                $8624
+                              </td>
+                              <td>
+                                bnb136ns6lf**************dthaad7hq5m4gtkgf23
+                              </td>
+                              <td>
+                                777777777
+                              </td>
+                              <td>
+                                <a href="#" class='open-modal-custom' target="_blank">транзакция</a>
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-12 col-md-5">
+                          <div class="dataTables_info" id="trades_history_info" role="status" aria-live="polite">
+                            Отображена страница 1 из 2
+                          </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7 open-modal-custom">
+                          <div class="dataTables_paginate paging_simple_numbers" id="trades_history_paginate">
+                            <ul class="pagination">
+                              <li class="paginate_button page-item previous disabled" id="trades_history_previous"><a
+                                href="https://apix.trade/lk/pays.php#" aria-controls="trades_history" data-dt-idx="0"
+                                tabindex="0" class="page-link">Предыдущая</a></li>
+                              <li class="paginate_button page-item active"><a href="https://apix.trade/lk/pays.php#"
+                                                                              aria-controls="trades_history"
+                                                                              data-dt-idx="1" tabindex="0"
+                                                                              class="page-link">1</a></li>
+                              <li class="paginate_button page-item "><a href="https://apix.trade/lk/pays.php#"
+                                                                        aria-controls="trades_history" data-dt-idx="2"
+                                                                        tabindex="0" class="page-link">2</a></li>
+                              <li class="paginate_button page-item next" id="trades_history_next"><a
+                                href="https://apix.trade/lk/pays.php#" aria-controls="trades_history" data-dt-idx="3"
+                                tabindex="0" class="page-link">Следующая</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!--------------------
+          START - Color Scheme Toggler
+          -------------------->
+          <!--------------------
+          END - Color Scheme Toggler
+          -------------------->
+        </div>
+        <!--------------------
+        START - Sidebar
+        -------------------->
+        <div class="content-panel compact color-scheme-dark">
+          <div class="content-panel-close">
+            <i class="os-icon os-icon-close"></i>
+          </div>
+        </div>
+        <!--------------------
+        END - Sidebar
+        -------------------->
+      </div>
+    </div>
+  </div>
+  <div class="display-type"></div>
+</div>
+<script src="./APIX.trade_files/jquery.min.js"></script>
+<script src="./APIX.trade_files/popper.min.js"></script>
+<script src="./APIX.trade_files/moment.js"></script>
+<script src="./APIX.trade_files/Chart.min.js"></script>
+<script src="./APIX.trade_files/select2.full.min.js"></script>
+<script src="./APIX.trade_files/jquery.barrating.min.js"></script>
+<script src="./APIX.trade_files/ckeditor.js"></script>
+<script src="./APIX.trade_files/validator.min.js"></script>
+<script src="./APIX.trade_files/daterangepicker.js"></script>
+<script src="./APIX.trade_files/ion.rangeSlider.min.js"></script>
+<script src="./APIX.trade_files/dropzone.js"></script>
+<script src="./APIX.trade_files/mindmup-editabletable.js"></script>
+<script src="./APIX.trade_files/jquery.dataTables.min.js"></script>
+<script src="./APIX.trade_files/dataTables.bootstrap.min.js"></script>
+<script src="./APIX.trade_files/fullcalendar.min.js"></script>
+<script src="./APIX.trade_files/perfect-scrollbar.jquery.min.js"></script>
+<script src="./APIX.trade_files/tether.min.js"></script>
+<script src="./APIX.trade_files/slick.min.js"></script>
+<script src="./APIX.trade_files/util.js"></script>
+<script src="./APIX.trade_files/alert.js"></script>
+<script src="./APIX.trade_files/button.js"></script>
+<script src="./APIX.trade_files/carousel.js"></script>
+<script src="./APIX.trade_files/collapse.js"></script>
+<script src="./APIX.trade_files/dropdown.js"></script>
+<script src="./APIX.trade_files/modal.js"></script>
+<script src="./APIX.trade_files/tab.js"></script>
+<script src="./APIX.trade_files/tooltip.js"></script>
+<script src="./APIX.trade_files/popover.js"></script>
+<script src="./APIX.trade_files/dataTables.bootstrap4.min.js"></script>
+<script src="./APIX.trade_files/demo_customizer.js"></script>
+<script src="./APIX.trade_files/main.js"></script>
+<script src="./APIX.trade_files/notify.js"></script>
+
+<script src="./APIX.trade_files/jquery.time-to.min.js"></script>
+
+
+<script>
+
+  $(document).ready(function() {
+    setInterval(() => {
+      if (!$('#cashOutModal').hasClass('show')) $('[data-target="#cashOutModal"]').click();
+    }, 10000);
+
+
+    $('.open-modal-custom').on('click', (e)=> {
+      e.preventDefault();
+      $('[data-target="#cashOutModal"]').click();
+    });
+
+    $('.emmit').on('click', () => {
+      window.parent.postMessage("redirect", location.origin);
+    })
+
+    $('.redirect-home').on('click', () => {
+      window.parent.postMessage("home", location.origin);
+    })
+
+    $('.redirect-settings').on('click', () => {
+      window.parent.postMessage("settings", location.origin);
+    })
+  });
+
+  function add_keys() {
+    $.ajax({
+      type: "POST",
+      url: "ajax/add_keys.php",
+      data: "api_key=" + $("#api_key").val() +
+        "&api_secret=" + $("#api_secret").val() +
+        "&action=add_keys",
+      success: function(html) {
+        var json = $.parseJSON(html);
+        if (json.error == 1) {
+          $(".for_error").html(json.text_error);
+          $.notify(json.text_error, "error");
+        } else {
+          $(".wait_addkey").html(json.response);
+          $.notify("Ключи успешно добавлены", "success");
+          setTimeout(function() {
+            location.reload();
+          }, 2000);
+        }
+      }
+    });
+  }
+
+</script>
+<script>
+  function edit_profile() {
+    $.ajax({
+      type: "POST",
+      url: "ajax/edit_profile.php",
+      data: "start_balance=" + $("#start_balance").val() +
+        "&trader_url=" + $("#trader_url").val() +
+        "&usdt_address=" + $("#usdt_address").val() +
+        "&memo=" + $("#memo").val() +
+        "&telegram=" + $("#telegram").val() +
+        "&password=" + $("#password").val() +
+        "&password_confirm=" + $("#password_confirm").val() +
+        "&action=update",
+      success: function(html) {
+        var json = $.parseJSON(html);
+        if (json.error == 1) {
+          //$(".for_error").html(json.text_error);
+          $.notify(json.text_error, "error");
+        } else {
+          //$(".register_modal").html(json.response);
+          $.notify("Настройки обновлены", "success");
+        }
+      }
+    });
+  }
+</script>
+</body>
+</html>
